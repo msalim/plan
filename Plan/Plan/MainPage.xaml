@@ -7,24 +7,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="Main" Background="#FFFAFAFA" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+    <Grid x:Name="Main" Background="#FFFAFAFA" ScrollViewer.HorizontalScrollBarVisibility="Visible" BorderThickness="0,0,0,3" MinWidth="500">
         <Grid.RowDefinitions>
             <RowDefinition Height ="70"></RowDefinition>
             <RowDefinition Height ="1"></RowDefinition>
             <RowDefinition Height ="70"></RowDefinition>
-            <RowDefinition Height ="199*"></RowDefinition>
-            <RowDefinition Height="620*"/>
+            <RowDefinition Height ="3"></RowDefinition>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid x:Name="TopBar" Background="#FFFAFAFA">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width ="500" MinWidth="400"/>
+                <ColumnDefinition Width ="400" MinWidth="400"/>
                 <ColumnDefinition Width ="1"/>
-                <ColumnDefinition Width ="2*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="1"/>
+                <ColumnDefinition Width ="75"/>
+                <ColumnDefinition Width ="75"/>
+                <ColumnDefinition Width ="75"/>
             </Grid.ColumnDefinitions>
             <Path Grid.Column="1" Data="M865,10 L865,60" Fill="#FFDDDDDD" HorizontalAlignment="Left" Margin="0,0,0,0" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition" Height="50"/>
+            <Button x:Name="ConfirmButton" Grid.Column="4" Content="✓" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00AAAAAA" FontSize="40" FontWeight="Thin" Click="ConfirmButton_Click"/>
+            <Button x:Name="CancelButton" Grid.Column="5" Content="☓" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00AAAAAA" FontSize="40" FontWeight="Thin" Click="CancelButton_Click"/>
+            <Button x:Name="ProModeButton" Grid.Column="6" Content="Off" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00000000" FontSize="30" FontWeight="Light" Click="ProModeButton_Click"/>
             <TextBox Grid.Column="2" x:Name="EventText" Height="70" BorderThickness="0" Padding="20,10,0,0" TextWrapping="Wrap" Text="" PlaceholderText="Write or Enter Event"
-        		d:LayoutOverrides="LeftPosition, RightPosition" Background="#FFF2F2F2" FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" FontWeight="SemiLight"/>
+        		d:LayoutOverrides="LeftPosition, RightPosition" Background="#FFF2F2F2" FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" FontWeight="SemiLight" SelectionHighlightColor="Black"/>
             <InkCanvas x:Name="EventCanvas" Grid.Column="2" Margin="0" d:LayoutOverrides="LeftPosition, RightPosition" Tapped="EventCanvas_Tapped"/>
             <Grid x:Name="NavGrid" Grid.ColumnSpan="2" Background="#FFFAFAFA">
                 <Grid.ColumnDefinitions>
@@ -32,101 +39,602 @@
                     <ColumnDefinition Width ="70"/>
                     <ColumnDefinition Width ="360"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="MonthText" Height="70" Padding="20,10,0,0" TextWrapping="Wrap" Text="Hello"
-        			FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" d:LayoutOverrides="LeftPosition, RightPosition" Grid.Column="2" FontWeight="Light"/>
-                <Button x:Name="PreviousWeek" Content="&lt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,10" Background="#00000000" FontSize="40" FontWeight="Light" Click="PreviousWeek_Click"/>
-                <Button x:Name="NextWeek" Content="&gt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,10" Background="#00000000" FontSize="40" FontWeight="Light" Grid.Column="1" Click="NextWeek_Click"/>
+                <TextBlock x:Name="MonthText" Height="70" Padding="20,10,0,0" TextWrapping="Wrap" Text="February 2016"
+        			FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" d:LayoutOverrides="LeftPosition, RightPosition" Grid.Column="2" FontWeight="Light" SelectionHighlightColor="Black"/>
+                <Button x:Name="PreviousWeek" Content="&lt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00000000" FontSize="40" FontWeight="Light" Click="PreviousWeek_Click"/>
+                <Button x:Name="NextWeek" Content="&gt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00000000" FontSize="40" FontWeight="Light" Grid.Column="1" Click="NextWeek_Click"/>
             </Grid>
+            <Path Grid.Column="1" Data="M1288.67,0 L1288.67,68.4167" Fill="#FFDDDDDD" HorizontalAlignment="Left" Margin="0,10" Stretch="Fill" Stroke="#FFBBBBBB" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition"/>
+            <Path Grid.Column="3" Data="M1288.67,0 L1288.67,68.4167" Fill="#FFDDDDDD" HorizontalAlignment="Left" Margin="0,10" Stretch="Fill" Stroke="#FFBBBBBB" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition"/>
         </Grid>
 
-        <Grid x:Name="Date" Grid.Row="2" Background="#FFFAFAFA" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
+        <Grid x:Name="Date" Grid.Row="2" Background="#FFFAFAFA" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition" ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderThickness="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width ="37"/>
-                <ColumnDefinition Width="113"/>
-                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width="0"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width ="3*" MinWidth="150" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="150" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="150" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="150" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="150" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="150" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="150" />
                 <ColumnDefinition Width ="1" />
                 <ColumnDefinition Width ="1*" MinWidth="30"/>
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="MondayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Mon"
-        		FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="2" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Margin="0,0,-0.333,0"/>
+        		FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="2" FontWeight="Light" Foreground="#FF444444"/>
             <TextBlock x:Name="TuesdayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Tue"
-            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="4" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Grid.ColumnSpan="2" Margin="0.333,0,0,0"/>
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="4" FontWeight="Light" Grid.ColumnSpan="2" Foreground="#FF444444"/>
             <TextBlock x:Name="WednesdayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Wed"
-            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="6" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Margin="0,0,-0.333,0"/>
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="6" FontWeight="Light" Foreground="#FF444444"/>
             <TextBlock x:Name="ThursdayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Thu"
-            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="8" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Grid.ColumnSpan="2" Margin="0.333,0,0,0"/>
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="8" FontWeight="Light" Grid.ColumnSpan="2" Foreground="#FF444444"/>
             <TextBlock x:Name="FridayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Fri"
-            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="10" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Margin="0,0,-0.333,0"/>
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="10" FontWeight="Light" Foreground="#FF444444"/>
             <TextBlock x:Name="SaturdayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Sat"
-            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="12" FontWeight="Light" Grid.ColumnSpan="2" Margin="0.333,0"/>
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="12" FontWeight="Light" Foreground="#FF444444"/>
             <TextBlock x:Name="SundayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Sun"
-            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="14" FontWeight="Light" Margin="-0.333,0"/>
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="14" FontWeight="Light" Foreground="#FF444444"/>
         </Grid>
         <ScrollViewer 
         HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.516,5.295" Grid.Row="3" Grid.RowSpan="2" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
+        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.516,5.295" Grid.Row="4" Grid.RowSpan="1" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
 
             <Grid x:Name="Calendar" Background ="Transparent">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width ="150"/>
+                    <ColumnDefinition Width ="1"/>
+                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="1"/>
+                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="1"/>
+                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="1"/>
+                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="1"/>
+                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="1"/>
+                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="1"/>
                     <ColumnDefinition Width ="3*" MinWidth="100" />
-                    <ColumnDefinition Width ="3*" MinWidth="100" />
-                    <ColumnDefinition Width ="3*" MinWidth="100" />
-                    <ColumnDefinition Width ="3*" MinWidth="100" />
-                    <ColumnDefinition Width ="3*" MinWidth="100" />
-                    <ColumnDefinition Width ="3*" MinWidth="100" />
-                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="1"/>
                     <ColumnDefinition Width ="1*" MinWidth="30"  />
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
-                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
+                    <RowDefinition Height ="37"/>
+                    <RowDefinition Height ="1"/>
                     <RowDefinition Height ="50"/>
+
                 </Grid.RowDefinitions>
-                <Rectangle Grid.Column="2" Fill="Green" Margin="0" Grid.Row="24" Stroke="Black"/>
-                <InkCanvas x:Name="CalendarInk" Grid.ColumnSpan="8" Grid.Column="1" Margin="-30,-37,29,0" Grid.RowSpan="25" d:LayoutOverrides="LeftPosition, RightPosition"/>
+
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="1" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="3" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="5" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="7" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="9" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="11" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="13" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="15" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="17" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="19" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="21" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="23" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="25" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="27" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="29" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="31" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="33" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="35" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="37" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="39" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="41" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="43" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="45" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="47" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="49" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="51" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="53" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="55" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="57" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="59" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="61" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="63" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="65" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="67" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="69" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="71" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="73" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="75" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="77" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="79" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="81" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="83" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="85" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="87" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="89" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="91" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="93" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="14" Grid.Column="1"/>
+                <Path Data="M51.3333,37 L77,37" Fill="LightGray" Grid.Row="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="15"/>
+                <TextBlock x:Name="a12" Margin="0" TextWrapping="Wrap" Text="12am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="0" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a1" Margin="0" TextWrapping="Wrap" Text="1am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="4" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a2" Margin="0" TextWrapping="Wrap" Text="2am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="8" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a3" Margin="0" TextWrapping="Wrap" Text="3am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="12" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a4" Margin="0" TextWrapping="Wrap" Text="4am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="16" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a5" Margin="0" TextWrapping="Wrap" Text="5am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="20" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a6" Margin="0" TextWrapping="Wrap" Text="6am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="24" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a7" Margin="0" TextWrapping="Wrap" Text="7am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="28" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a8" Margin="0" TextWrapping="Wrap" Text="8am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="32" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a9" Margin="0" TextWrapping="Wrap" Text="9am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="36" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a10" Margin="0" TextWrapping="Wrap" Text="10am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="40" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="a11" Margin="0" TextWrapping="Wrap" Text="11am" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="44" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p12" Margin="0" TextWrapping="Wrap" Text="12pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="48" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p1" Margin="0" TextWrapping="Wrap" Text="1pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="52" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p2" Margin="0" TextWrapping="Wrap" Text="2pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="56" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p3" Margin="0" TextWrapping="Wrap" Text="3pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="60" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p4" Margin="0" TextWrapping="Wrap" Text="4pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="64" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p5" Margin="0" TextWrapping="Wrap" Text="5pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="68" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p6" Margin="0" TextWrapping="Wrap" Text="6pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="72" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p7" Margin="0" TextWrapping="Wrap" Text="7pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="76" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p8" Margin="0" TextWrapping="Wrap" Text="8pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="80" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p9" Margin="0" TextWrapping="Wrap" Text="9pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="84" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p10" Margin="0" TextWrapping="Wrap" Text="10pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="88" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <TextBlock x:Name="p11" Margin="0" TextWrapping="Wrap" Text="11pm" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Right" FontSize="18.667" Padding="0,0,10,0" Grid.Row="92" Foreground="#FF444444" FontWeight="Light" SelectionHighlightColor="Black" />
+                <Path Grid.Row="0" Grid.Column="1" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
+                <Path Grid.Row="0" Grid.Column="3" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
+                <Path Grid.Row="0" Grid.Column="5" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
+                <Path Grid.Row="0" Grid.Column="7" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
+                <Path Grid.Row="0" Grid.Column="9" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
+                <Path Grid.Row="0" Grid.Column="11" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
+                <Path Grid.Row="0" Grid.Column="13" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
+                <Path Grid.Row="0" Grid.Column="15" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
+<Rectangle x:Name="r0" Grid.Row="0" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r1" Grid.Row="2" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r2" Grid.Row="4" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r3" Grid.Row="6" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r4" Grid.Row="8" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r5" Grid.Row="10" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r6" Grid.Row="12" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r7" Grid.Row="14" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r8" Grid.Row="16" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r9" Grid.Row="18" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r10" Grid.Row="20" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r11" Grid.Row="22" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r12" Grid.Row="24" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r13" Grid.Row="26" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r14" Grid.Row="28" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r15" Grid.Row="30" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r16" Grid.Row="32" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r17" Grid.Row="34" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r18" Grid.Row="36" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r19" Grid.Row="38" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r20" Grid.Row="40" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r21" Grid.Row="42" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r22" Grid.Row="44" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r23" Grid.Row="46" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r24" Grid.Row="48" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r25" Grid.Row="50" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r26" Grid.Row="52" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r27" Grid.Row="54" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r28" Grid.Row="56" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r29" Grid.Row="58" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r30" Grid.Row="60" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r31" Grid.Row="62" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r32" Grid.Row="64" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r33" Grid.Row="66" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r34" Grid.Row="68" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r35" Grid.Row="70" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r36" Grid.Row="72" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r37" Grid.Row="74" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r38" Grid.Row="76" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r39" Grid.Row="78" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r40" Grid.Row="80" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r41" Grid.Row="82" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r42" Grid.Row="84" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r43" Grid.Row="86" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r44" Grid.Row="88" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r45" Grid.Row="90" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r46" Grid.Row="92" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r47" Grid.Row="94" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r48" Grid.Row="0" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r49" Grid.Row="2" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r50" Grid.Row="4" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r51" Grid.Row="6" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r52" Grid.Row="8" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r53" Grid.Row="10" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r54" Grid.Row="12" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r55" Grid.Row="14" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r56" Grid.Row="16" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r57" Grid.Row="18" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r58" Grid.Row="20" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r59" Grid.Row="22" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r60" Grid.Row="24" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r61" Grid.Row="26" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r62" Grid.Row="28" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r63" Grid.Row="30" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r64" Grid.Row="32" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r65" Grid.Row="34" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r66" Grid.Row="36" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r67" Grid.Row="38" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r68" Grid.Row="40" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r69" Grid.Row="42" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r70" Grid.Row="44" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r71" Grid.Row="46" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r72" Grid.Row="48" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r73" Grid.Row="50" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r74" Grid.Row="52" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r75" Grid.Row="54" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r76" Grid.Row="56" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r77" Grid.Row="58" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r78" Grid.Row="60" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r79" Grid.Row="62" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r80" Grid.Row="64" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r81" Grid.Row="66" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r82" Grid.Row="68" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r83" Grid.Row="70" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r84" Grid.Row="72" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r85" Grid.Row="74" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r86" Grid.Row="76" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r87" Grid.Row="78" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r88" Grid.Row="80" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r89" Grid.Row="82" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r90" Grid.Row="84" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r91" Grid.Row="86" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r92" Grid.Row="88" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r93" Grid.Row="90" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r94" Grid.Row="92" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r95" Grid.Row="94" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r96" Grid.Row="0" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r97" Grid.Row="2" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r98" Grid.Row="4" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r99" Grid.Row="6" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r100" Grid.Row="8" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r101" Grid.Row="10" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r102" Grid.Row="12" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r103" Grid.Row="14" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r104" Grid.Row="16" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r105" Grid.Row="18" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r106" Grid.Row="20" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r107" Grid.Row="22" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r108" Grid.Row="24" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r109" Grid.Row="26" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r110" Grid.Row="28" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r111" Grid.Row="30" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r112" Grid.Row="32" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r113" Grid.Row="34" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r114" Grid.Row="36" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r115" Grid.Row="38" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r116" Grid.Row="40" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r117" Grid.Row="42" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r118" Grid.Row="44" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r119" Grid.Row="46" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r120" Grid.Row="48" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r121" Grid.Row="50" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r122" Grid.Row="52" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r123" Grid.Row="54" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r124" Grid.Row="56" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r125" Grid.Row="58" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r126" Grid.Row="60" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r127" Grid.Row="62" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r128" Grid.Row="64" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r129" Grid.Row="66" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r130" Grid.Row="68" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r131" Grid.Row="70" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r132" Grid.Row="72" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r133" Grid.Row="74" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r134" Grid.Row="76" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r135" Grid.Row="78" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r136" Grid.Row="80" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r137" Grid.Row="82" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r138" Grid.Row="84" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r139" Grid.Row="86" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r140" Grid.Row="88" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r141" Grid.Row="90" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r142" Grid.Row="92" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r143" Grid.Row="94" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r144" Grid.Row="0" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r145" Grid.Row="2" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r146" Grid.Row="4" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r147" Grid.Row="6" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r148" Grid.Row="8" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r149" Grid.Row="10" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r150" Grid.Row="12" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r151" Grid.Row="14" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r152" Grid.Row="16" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r153" Grid.Row="18" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r154" Grid.Row="20" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r155" Grid.Row="22" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r156" Grid.Row="24" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r157" Grid.Row="26" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r158" Grid.Row="28" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r159" Grid.Row="30" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r160" Grid.Row="32" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r161" Grid.Row="34" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r162" Grid.Row="36" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r163" Grid.Row="38" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r164" Grid.Row="40" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r165" Grid.Row="42" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r166" Grid.Row="44" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r167" Grid.Row="46" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r168" Grid.Row="48" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r169" Grid.Row="50" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r170" Grid.Row="52" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r171" Grid.Row="54" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r172" Grid.Row="56" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r173" Grid.Row="58" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r174" Grid.Row="60" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r175" Grid.Row="62" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r176" Grid.Row="64" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r177" Grid.Row="66" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r178" Grid.Row="68" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r179" Grid.Row="70" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r180" Grid.Row="72" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r181" Grid.Row="74" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r182" Grid.Row="76" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r183" Grid.Row="78" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r184" Grid.Row="80" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r185" Grid.Row="82" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r186" Grid.Row="84" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r187" Grid.Row="86" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r188" Grid.Row="88" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r189" Grid.Row="90" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r190" Grid.Row="92" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r191" Grid.Row="94" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r192" Grid.Row="0" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r193" Grid.Row="2" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r194" Grid.Row="4" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r195" Grid.Row="6" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r196" Grid.Row="8" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r197" Grid.Row="10" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r198" Grid.Row="12" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r199" Grid.Row="14" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r200" Grid.Row="16" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r201" Grid.Row="18" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r202" Grid.Row="20" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r203" Grid.Row="22" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r204" Grid.Row="24" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r205" Grid.Row="26" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r206" Grid.Row="28" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r207" Grid.Row="30" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r208" Grid.Row="32" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r209" Grid.Row="34" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r210" Grid.Row="36" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r211" Grid.Row="38" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r212" Grid.Row="40" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r213" Grid.Row="42" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r214" Grid.Row="44" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r215" Grid.Row="46" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r216" Grid.Row="48" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r217" Grid.Row="50" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r218" Grid.Row="52" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r219" Grid.Row="54" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r220" Grid.Row="56" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r221" Grid.Row="58" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r222" Grid.Row="60" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r223" Grid.Row="62" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r224" Grid.Row="64" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r225" Grid.Row="66" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r226" Grid.Row="68" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r227" Grid.Row="70" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r228" Grid.Row="72" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r229" Grid.Row="74" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r230" Grid.Row="76" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r231" Grid.Row="78" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r232" Grid.Row="80" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r233" Grid.Row="82" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r234" Grid.Row="84" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r235" Grid.Row="86" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r236" Grid.Row="88" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r237" Grid.Row="90" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r238" Grid.Row="92" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r239" Grid.Row="94" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r240" Grid.Row="0" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r241" Grid.Row="2" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r242" Grid.Row="4" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r243" Grid.Row="6" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r244" Grid.Row="8" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r245" Grid.Row="10" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r246" Grid.Row="12" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r247" Grid.Row="14" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r248" Grid.Row="16" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r249" Grid.Row="18" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r250" Grid.Row="20" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r251" Grid.Row="22" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r252" Grid.Row="24" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r253" Grid.Row="26" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r254" Grid.Row="28" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r255" Grid.Row="30" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r256" Grid.Row="32" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r257" Grid.Row="34" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r258" Grid.Row="36" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r259" Grid.Row="38" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r260" Grid.Row="40" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r261" Grid.Row="42" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r262" Grid.Row="44" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r263" Grid.Row="46" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r264" Grid.Row="48" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r265" Grid.Row="50" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r266" Grid.Row="52" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r267" Grid.Row="54" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r268" Grid.Row="56" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r269" Grid.Row="58" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r270" Grid.Row="60" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r271" Grid.Row="62" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r272" Grid.Row="64" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r273" Grid.Row="66" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r274" Grid.Row="68" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r275" Grid.Row="70" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r276" Grid.Row="72" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r277" Grid.Row="74" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r278" Grid.Row="76" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r279" Grid.Row="78" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r280" Grid.Row="80" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r281" Grid.Row="82" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r282" Grid.Row="84" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r283" Grid.Row="86" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r284" Grid.Row="88" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r285" Grid.Row="90" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r286" Grid.Row="92" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r287" Grid.Row="94" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r288" Grid.Row="0" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r289" Grid.Row="2" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r290" Grid.Row="4" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r291" Grid.Row="6" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r292" Grid.Row="8" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r293" Grid.Row="10" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r294" Grid.Row="12" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r295" Grid.Row="14" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r296" Grid.Row="16" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r297" Grid.Row="18" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r298" Grid.Row="20" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r299" Grid.Row="22" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r300" Grid.Row="24" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r301" Grid.Row="26" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r302" Grid.Row="28" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r303" Grid.Row="30" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r304" Grid.Row="32" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r305" Grid.Row="34" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r306" Grid.Row="36" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r307" Grid.Row="38" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r308" Grid.Row="40" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r309" Grid.Row="42" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r310" Grid.Row="44" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r311" Grid.Row="46" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r312" Grid.Row="48" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r313" Grid.Row="50" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r314" Grid.Row="52" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r315" Grid.Row="54" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r316" Grid.Row="56" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r317" Grid.Row="58" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r318" Grid.Row="60" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r319" Grid.Row="62" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r320" Grid.Row="64" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r321" Grid.Row="66" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r322" Grid.Row="68" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r323" Grid.Row="70" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r324" Grid.Row="72" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r325" Grid.Row="74" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r326" Grid.Row="76" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r327" Grid.Row="78" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r328" Grid.Row="80" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r329" Grid.Row="82" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r330" Grid.Row="84" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r331" Grid.Row="86" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r332" Grid.Row="88" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r333" Grid.Row="90" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r334" Grid.Row="92" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<Rectangle x:Name="r335" Grid.Row="94" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
+<TextBlock x:Name="textBlock" Margin="10,0" Grid.Row="96" TextWrapping="Wrap" Text="Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem" Grid.ColumnSpan="15" d:LayoutOverrides="LeftMargin, RightMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" SelectionHighlightColor="#FF9A9A9A" FontSize="24" HorizontalAlignment="Center" Foreground="#FF959595"/>
+                <InkCanvas x:Name="CalendarInk" Grid.ColumnSpan="16" Grid.Column="1" Margin="-20,-20,20,10" Grid.RowSpan="97" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
 
             </Grid>
         </ScrollViewer>
-        <Path Grid.Row="1" Data="M11.7708,70 L59.2708,70" Fill="Gray" HorizontalAlignment="Left" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Margin="0">
+        <Path Grid.Row="1" Data="M11.7708,70 L59.2708,70" Fill="Gray" HorizontalAlignment="Left" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" VerticalAlignment="Bottom" Margin="0">
             <Path.RenderTransform>
                 <CompositeTransform ScaleY="-1"/>
             </Path.RenderTransform>
         </Path>
+        <Path Data="M1435.17,141.333 L1433.5,141.333" Fill="#FF888888" Grid.Row="3" Stretch="Fill" Stroke="#FF888888" UseLayoutRounding="False" RenderTransformOrigin="-148.84,0.531" d:LayoutOverrides="LeftPosition, RightPosition" Height="2" StrokeThickness="2" Margin="-5,0"/>
     </Grid>
 </Page>

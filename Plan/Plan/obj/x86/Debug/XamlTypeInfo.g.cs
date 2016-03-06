@@ -214,6 +214,7 @@ namespace Plan.Plan_XamlTypeInfo
                 userType = new global::Plan.Plan_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
                 userType.AddMemberName("Events");
+                userType.AddMemberName("ResultText");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -337,6 +338,16 @@ namespace Plan.Plan_XamlTypeInfo
             var that = (global::Plan.MainPage.CalEvent)instance;
             that.EndI = (global::System.Int32)Value;
         }
+        private object get_6_MainPage_ResultText(object instance)
+        {
+            var that = (global::Plan.MainPage)instance;
+            return that.ResultText;
+        }
+        private void set_6_MainPage_ResultText(object instance, object Value)
+        {
+            var that = (global::Plan.MainPage)instance;
+            that.ResultText = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -380,6 +391,12 @@ namespace Plan.Plan_XamlTypeInfo
                 xamlMember = new global::Plan.Plan_XamlTypeInfo.XamlMember(this, "EndI", "Int32");
                 xamlMember.Getter = get_5_CalEvent_EndI;
                 xamlMember.Setter = set_5_CalEvent_EndI;
+                break;
+            case "Plan.MainPage.ResultText":
+                userType = (global::Plan.Plan_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Plan.MainPage");
+                xamlMember = new global::Plan.Plan_XamlTypeInfo.XamlMember(this, "ResultText", "String");
+                xamlMember.Getter = get_6_MainPage_ResultText;
+                xamlMember.Setter = set_6_MainPage_ResultText;
                 break;
             }
             return xamlMember;

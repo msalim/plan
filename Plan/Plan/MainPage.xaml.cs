@@ -33,10 +33,11 @@ namespace Plan
         public static bool SetTime {get; set;}
         public List<CalEvent> Events {get; set;}
         public static bool ProMode {get; set;}
-        public static string ResultText {get; set;}
+        public string ResultText {get; set;}
         public static int SaveYear {get; set;}
         public static int SaveMonth {get; set;}
         public static int SaveDay {get; set;}
+        public static bool StringInput {get; set;}
 
         public MainPage()
         {
@@ -290,12 +291,12 @@ namespace Plan
         private void NextWeek_Click(object sender, RoutedEventArgs e)
         {
             Offset = Offset+7;
-            InitializeDate();
+            Refresh();
         }
         private void PreviousWeek_Click(object sender, RoutedEventArgs e)
         {
             Offset = Offset-7;
-            InitializeDate(); 
+            Refresh(); 
         }
 
         private void ProModeButton_Click(object sender, RoutedEventArgs e)
@@ -332,6 +333,7 @@ namespace Plan
             SetTime = false;
             ResultText = "";
             CleanBoard();
+            this.InitializeDate();
             this.DisplayPanels();
             this.CalendarInk.InkPresenter.StrokeContainer.Clear();
         }
@@ -1731,40 +1733,27 @@ namespace Plan
 
         private async void RecognizeCalendar()
         {
-            string s = EventText.Text;
-            if (s != "Cancelled." || s != "" || s != "Please try again." ||
-                s != "Deleted." || s.IndexOf("Please select") > 0 ||
-                s.IndexOf("Please try") > 0 || s.IndexOf("Event registered") > 0 ||
-                s.IndexOf("Select time for") > 0)
+            var InkRecognizer = new InkRecognizerContainer();
+            if (InkRecognizer != null)
             {
-                ResultText = s;
-                EventText.Text = "Select time for: " + s;
-                SetTime = true;
-            }
-            else
-            {
-                var InkRecognizer = new InkRecognizerContainer();
-                if (InkRecognizer != null)
+                try
                 {
-                    try
-                    {
 
-                        var recognitionResults = await InkRecognizer.RecognizeAsync(this.CalendarInk.InkPresenter.StrokeContainer, InkRecognitionTarget.All);
-                        string recognizedText = string.Join(" ", recognitionResults.Select(i => i.GetTextCandidates()[0]));
-                        this.CalendarInk.InkPresenter.StrokeContainer.Clear();
-                        ResultText = recognizedText;
-                        if (!ProMode) EventText.Text = "Select time for: " + recognizedText;
-                        SetTime = true;
-                        if (ProMode)
-                        {
-                            RegisterEvent();
-                            Refresh();
-                        }
-                    }
-                    catch
+                    var recognitionResults = await InkRecognizer.RecognizeAsync(this.CalendarInk.InkPresenter.StrokeContainer, InkRecognitionTarget.All);
+                    string recognizedText = string.Join(" ", recognitionResults.Select(i => i.GetTextCandidates()[0]));
+                    this.CalendarInk.InkPresenter.StrokeContainer.Clear();
+                    ResultText = recognizedText;
+                    if (!ProMode) EventText.Text = "Select time for: " + recognizedText;
+                    SetTime = true;
+                    if (ProMode)
                     {
-                        EventText.Text = "Please try again.";
+                        RegisterEvent();
+                        Refresh();
                     }
+                }
+                catch
+                {
+                    EventText.Text = "Please try again.";
                 }
             }
         }
@@ -1892,6 +1881,20 @@ namespace Plan
             
             Refresh();
         }
-        
+
+        private void EventText_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                var s = EventText.Text;
+                ResultText = s;
+                // figure out dependency property
+
+                
+
+                EventText.Text = s;
+                SetTime = true;
+            }
+        }
     }
 }

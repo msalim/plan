@@ -37,7 +37,7 @@ namespace Plan
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
 
 #if DEBUG
@@ -46,6 +46,10 @@ namespace Plan
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
+        var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(
+        new Uri("ms-appx://VoiceCommandDefinition.xml"));
+        await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.
+        InstallCommandDefinitionsFromStorageFileAsync(storageFile);
 
             Frame rootFrame = Window.Current.Content as Frame;
 

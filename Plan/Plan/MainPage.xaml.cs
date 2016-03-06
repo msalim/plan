@@ -284,6 +284,7 @@ namespace Plan
         private void EventCanvas_Tapped(object sender, RoutedEventArgs e)
         {
             EventText.Focus(FocusState.Programmatic);
+            EventText.Text = "";
         }
         
         private void NextWeek_Click(object sender, RoutedEventArgs e)
@@ -330,8 +331,685 @@ namespace Plan
         {   
             SetTime = false;
             ResultText = "";
+            CleanBoard();
             this.DisplayPanels();
             this.CalendarInk.InkPresenter.StrokeContainer.Clear();
+        }
+
+        private void CleanBoard()
+        {
+            r0.Fill = new SolidColorBrush(Colors.Transparent);
+            r1.Fill = new SolidColorBrush(Colors.Transparent);
+            r2.Fill = new SolidColorBrush(Colors.Transparent);
+            r3.Fill = new SolidColorBrush(Colors.Transparent);
+            r4.Fill = new SolidColorBrush(Colors.Transparent);
+            r5.Fill = new SolidColorBrush(Colors.Transparent);
+            r6.Fill = new SolidColorBrush(Colors.Transparent);
+            r7.Fill = new SolidColorBrush(Colors.Transparent);
+            r8.Fill = new SolidColorBrush(Colors.Transparent);
+            r9.Fill = new SolidColorBrush(Colors.Transparent);
+            r10.Fill = new SolidColorBrush(Colors.Transparent);
+            r11.Fill = new SolidColorBrush(Colors.Transparent);
+            r12.Fill = new SolidColorBrush(Colors.Transparent);
+            r13.Fill = new SolidColorBrush(Colors.Transparent);
+            r14.Fill = new SolidColorBrush(Colors.Transparent);
+            r15.Fill = new SolidColorBrush(Colors.Transparent);
+            r16.Fill = new SolidColorBrush(Colors.Transparent);
+            r17.Fill = new SolidColorBrush(Colors.Transparent);
+            r18.Fill = new SolidColorBrush(Colors.Transparent);
+            r19.Fill = new SolidColorBrush(Colors.Transparent);
+            r20.Fill = new SolidColorBrush(Colors.Transparent);
+            r21.Fill = new SolidColorBrush(Colors.Transparent);
+            r22.Fill = new SolidColorBrush(Colors.Transparent);
+            r23.Fill = new SolidColorBrush(Colors.Transparent);
+            r24.Fill = new SolidColorBrush(Colors.Transparent);
+            r25.Fill = new SolidColorBrush(Colors.Transparent);
+            r26.Fill = new SolidColorBrush(Colors.Transparent);
+            r27.Fill = new SolidColorBrush(Colors.Transparent);
+            r28.Fill = new SolidColorBrush(Colors.Transparent);
+            r29.Fill = new SolidColorBrush(Colors.Transparent);
+            r30.Fill = new SolidColorBrush(Colors.Transparent);
+            r31.Fill = new SolidColorBrush(Colors.Transparent);
+            r32.Fill = new SolidColorBrush(Colors.Transparent);
+            r33.Fill = new SolidColorBrush(Colors.Transparent);
+            r34.Fill = new SolidColorBrush(Colors.Transparent);
+            r35.Fill = new SolidColorBrush(Colors.Transparent);
+            r36.Fill = new SolidColorBrush(Colors.Transparent);
+            r37.Fill = new SolidColorBrush(Colors.Transparent);
+            r38.Fill = new SolidColorBrush(Colors.Transparent);
+            r39.Fill = new SolidColorBrush(Colors.Transparent);
+            r40.Fill = new SolidColorBrush(Colors.Transparent);
+            r41.Fill = new SolidColorBrush(Colors.Transparent);
+            r42.Fill = new SolidColorBrush(Colors.Transparent);
+            r43.Fill = new SolidColorBrush(Colors.Transparent);
+            r44.Fill = new SolidColorBrush(Colors.Transparent);
+            r45.Fill = new SolidColorBrush(Colors.Transparent);
+            r46.Fill = new SolidColorBrush(Colors.Transparent);
+            r47.Fill = new SolidColorBrush(Colors.Transparent);
+            r48.Fill = new SolidColorBrush(Colors.Transparent);
+            r49.Fill = new SolidColorBrush(Colors.Transparent);
+            r50.Fill = new SolidColorBrush(Colors.Transparent);
+            r51.Fill = new SolidColorBrush(Colors.Transparent);
+            r52.Fill = new SolidColorBrush(Colors.Transparent);
+            r53.Fill = new SolidColorBrush(Colors.Transparent);
+            r54.Fill = new SolidColorBrush(Colors.Transparent);
+            r55.Fill = new SolidColorBrush(Colors.Transparent);
+            r56.Fill = new SolidColorBrush(Colors.Transparent);
+            r57.Fill = new SolidColorBrush(Colors.Transparent);
+            r58.Fill = new SolidColorBrush(Colors.Transparent);
+            r59.Fill = new SolidColorBrush(Colors.Transparent);
+            r60.Fill = new SolidColorBrush(Colors.Transparent);
+            r61.Fill = new SolidColorBrush(Colors.Transparent);
+            r62.Fill = new SolidColorBrush(Colors.Transparent);
+            r63.Fill = new SolidColorBrush(Colors.Transparent);
+            r64.Fill = new SolidColorBrush(Colors.Transparent);
+            r65.Fill = new SolidColorBrush(Colors.Transparent);
+            r66.Fill = new SolidColorBrush(Colors.Transparent);
+            r67.Fill = new SolidColorBrush(Colors.Transparent);
+            r68.Fill = new SolidColorBrush(Colors.Transparent);
+            r69.Fill = new SolidColorBrush(Colors.Transparent);
+            r70.Fill = new SolidColorBrush(Colors.Transparent);
+            r71.Fill = new SolidColorBrush(Colors.Transparent);
+            r72.Fill = new SolidColorBrush(Colors.Transparent);
+            r73.Fill = new SolidColorBrush(Colors.Transparent);
+            r74.Fill = new SolidColorBrush(Colors.Transparent);
+            r75.Fill = new SolidColorBrush(Colors.Transparent);
+            r76.Fill = new SolidColorBrush(Colors.Transparent);
+            r77.Fill = new SolidColorBrush(Colors.Transparent);
+            r78.Fill = new SolidColorBrush(Colors.Transparent);
+            r79.Fill = new SolidColorBrush(Colors.Transparent);
+            r80.Fill = new SolidColorBrush(Colors.Transparent);
+            r81.Fill = new SolidColorBrush(Colors.Transparent);
+            r82.Fill = new SolidColorBrush(Colors.Transparent);
+            r83.Fill = new SolidColorBrush(Colors.Transparent);
+            r84.Fill = new SolidColorBrush(Colors.Transparent);
+            r85.Fill = new SolidColorBrush(Colors.Transparent);
+            r86.Fill = new SolidColorBrush(Colors.Transparent);
+            r87.Fill = new SolidColorBrush(Colors.Transparent);
+            r88.Fill = new SolidColorBrush(Colors.Transparent);
+            r89.Fill = new SolidColorBrush(Colors.Transparent);
+            r90.Fill = new SolidColorBrush(Colors.Transparent);
+            r91.Fill = new SolidColorBrush(Colors.Transparent);
+            r92.Fill = new SolidColorBrush(Colors.Transparent);
+            r93.Fill = new SolidColorBrush(Colors.Transparent);
+            r94.Fill = new SolidColorBrush(Colors.Transparent);
+            r95.Fill = new SolidColorBrush(Colors.Transparent);
+            r96.Fill = new SolidColorBrush(Colors.Transparent);
+            r97.Fill = new SolidColorBrush(Colors.Transparent);
+            r98.Fill = new SolidColorBrush(Colors.Transparent);
+            r99.Fill = new SolidColorBrush(Colors.Transparent);
+            r100.Fill = new SolidColorBrush(Colors.Transparent);
+            r101.Fill = new SolidColorBrush(Colors.Transparent);
+            r102.Fill = new SolidColorBrush(Colors.Transparent);
+            r103.Fill = new SolidColorBrush(Colors.Transparent);
+            r104.Fill = new SolidColorBrush(Colors.Transparent);
+            r105.Fill = new SolidColorBrush(Colors.Transparent);
+            r106.Fill = new SolidColorBrush(Colors.Transparent);
+            r107.Fill = new SolidColorBrush(Colors.Transparent);
+            r108.Fill = new SolidColorBrush(Colors.Transparent);
+            r109.Fill = new SolidColorBrush(Colors.Transparent);
+            r110.Fill = new SolidColorBrush(Colors.Transparent);
+            r111.Fill = new SolidColorBrush(Colors.Transparent);
+            r112.Fill = new SolidColorBrush(Colors.Transparent);
+            r113.Fill = new SolidColorBrush(Colors.Transparent);
+            r114.Fill = new SolidColorBrush(Colors.Transparent);
+            r115.Fill = new SolidColorBrush(Colors.Transparent);
+            r116.Fill = new SolidColorBrush(Colors.Transparent);
+            r117.Fill = new SolidColorBrush(Colors.Transparent);
+            r118.Fill = new SolidColorBrush(Colors.Transparent);
+            r119.Fill = new SolidColorBrush(Colors.Transparent);
+            r120.Fill = new SolidColorBrush(Colors.Transparent);
+            r121.Fill = new SolidColorBrush(Colors.Transparent);
+            r122.Fill = new SolidColorBrush(Colors.Transparent);
+            r123.Fill = new SolidColorBrush(Colors.Transparent);
+            r124.Fill = new SolidColorBrush(Colors.Transparent);
+            r125.Fill = new SolidColorBrush(Colors.Transparent);
+            r126.Fill = new SolidColorBrush(Colors.Transparent);
+            r127.Fill = new SolidColorBrush(Colors.Transparent);
+            r128.Fill = new SolidColorBrush(Colors.Transparent);
+            r129.Fill = new SolidColorBrush(Colors.Transparent);
+            r130.Fill = new SolidColorBrush(Colors.Transparent);
+            r131.Fill = new SolidColorBrush(Colors.Transparent);
+            r132.Fill = new SolidColorBrush(Colors.Transparent);
+            r133.Fill = new SolidColorBrush(Colors.Transparent);
+            r134.Fill = new SolidColorBrush(Colors.Transparent);
+            r135.Fill = new SolidColorBrush(Colors.Transparent);
+            r136.Fill = new SolidColorBrush(Colors.Transparent);
+            r137.Fill = new SolidColorBrush(Colors.Transparent);
+            r138.Fill = new SolidColorBrush(Colors.Transparent);
+            r139.Fill = new SolidColorBrush(Colors.Transparent);
+            r140.Fill = new SolidColorBrush(Colors.Transparent);
+            r141.Fill = new SolidColorBrush(Colors.Transparent);
+            r142.Fill = new SolidColorBrush(Colors.Transparent);
+            r143.Fill = new SolidColorBrush(Colors.Transparent);
+            r144.Fill = new SolidColorBrush(Colors.Transparent);
+            r145.Fill = new SolidColorBrush(Colors.Transparent);
+            r146.Fill = new SolidColorBrush(Colors.Transparent);
+            r147.Fill = new SolidColorBrush(Colors.Transparent);
+            r148.Fill = new SolidColorBrush(Colors.Transparent);
+            r149.Fill = new SolidColorBrush(Colors.Transparent);
+            r150.Fill = new SolidColorBrush(Colors.Transparent);
+            r151.Fill = new SolidColorBrush(Colors.Transparent);
+            r152.Fill = new SolidColorBrush(Colors.Transparent);
+            r153.Fill = new SolidColorBrush(Colors.Transparent);
+            r154.Fill = new SolidColorBrush(Colors.Transparent);
+            r155.Fill = new SolidColorBrush(Colors.Transparent);
+            r156.Fill = new SolidColorBrush(Colors.Transparent);
+            r157.Fill = new SolidColorBrush(Colors.Transparent);
+            r158.Fill = new SolidColorBrush(Colors.Transparent);
+            r159.Fill = new SolidColorBrush(Colors.Transparent);
+            r160.Fill = new SolidColorBrush(Colors.Transparent);
+            r161.Fill = new SolidColorBrush(Colors.Transparent);
+            r162.Fill = new SolidColorBrush(Colors.Transparent);
+            r163.Fill = new SolidColorBrush(Colors.Transparent);
+            r164.Fill = new SolidColorBrush(Colors.Transparent);
+            r165.Fill = new SolidColorBrush(Colors.Transparent);
+            r166.Fill = new SolidColorBrush(Colors.Transparent);
+            r167.Fill = new SolidColorBrush(Colors.Transparent);
+            r168.Fill = new SolidColorBrush(Colors.Transparent);
+            r169.Fill = new SolidColorBrush(Colors.Transparent);
+            r170.Fill = new SolidColorBrush(Colors.Transparent);
+            r171.Fill = new SolidColorBrush(Colors.Transparent);
+            r172.Fill = new SolidColorBrush(Colors.Transparent);
+            r173.Fill = new SolidColorBrush(Colors.Transparent);
+            r174.Fill = new SolidColorBrush(Colors.Transparent);
+            r175.Fill = new SolidColorBrush(Colors.Transparent);
+            r176.Fill = new SolidColorBrush(Colors.Transparent);
+            r177.Fill = new SolidColorBrush(Colors.Transparent);
+            r178.Fill = new SolidColorBrush(Colors.Transparent);
+            r179.Fill = new SolidColorBrush(Colors.Transparent);
+            r180.Fill = new SolidColorBrush(Colors.Transparent);
+            r181.Fill = new SolidColorBrush(Colors.Transparent);
+            r182.Fill = new SolidColorBrush(Colors.Transparent);
+            r183.Fill = new SolidColorBrush(Colors.Transparent);
+            r184.Fill = new SolidColorBrush(Colors.Transparent);
+            r185.Fill = new SolidColorBrush(Colors.Transparent);
+            r186.Fill = new SolidColorBrush(Colors.Transparent);
+            r187.Fill = new SolidColorBrush(Colors.Transparent);
+            r188.Fill = new SolidColorBrush(Colors.Transparent);
+            r189.Fill = new SolidColorBrush(Colors.Transparent);
+            r190.Fill = new SolidColorBrush(Colors.Transparent);
+            r191.Fill = new SolidColorBrush(Colors.Transparent);
+            r192.Fill = new SolidColorBrush(Colors.Transparent);
+            r193.Fill = new SolidColorBrush(Colors.Transparent);
+            r194.Fill = new SolidColorBrush(Colors.Transparent);
+            r195.Fill = new SolidColorBrush(Colors.Transparent);
+            r196.Fill = new SolidColorBrush(Colors.Transparent);
+            r197.Fill = new SolidColorBrush(Colors.Transparent);
+            r198.Fill = new SolidColorBrush(Colors.Transparent);
+            r199.Fill = new SolidColorBrush(Colors.Transparent);
+            r200.Fill = new SolidColorBrush(Colors.Transparent);
+            r201.Fill = new SolidColorBrush(Colors.Transparent);
+            r202.Fill = new SolidColorBrush(Colors.Transparent);
+            r203.Fill = new SolidColorBrush(Colors.Transparent);
+            r204.Fill = new SolidColorBrush(Colors.Transparent);
+            r205.Fill = new SolidColorBrush(Colors.Transparent);
+            r206.Fill = new SolidColorBrush(Colors.Transparent);
+            r207.Fill = new SolidColorBrush(Colors.Transparent);
+            r208.Fill = new SolidColorBrush(Colors.Transparent);
+            r209.Fill = new SolidColorBrush(Colors.Transparent);
+            r210.Fill = new SolidColorBrush(Colors.Transparent);
+            r211.Fill = new SolidColorBrush(Colors.Transparent);
+            r212.Fill = new SolidColorBrush(Colors.Transparent);
+            r213.Fill = new SolidColorBrush(Colors.Transparent);
+            r214.Fill = new SolidColorBrush(Colors.Transparent);
+            r215.Fill = new SolidColorBrush(Colors.Transparent);
+            r216.Fill = new SolidColorBrush(Colors.Transparent);
+            r217.Fill = new SolidColorBrush(Colors.Transparent);
+            r218.Fill = new SolidColorBrush(Colors.Transparent);
+            r219.Fill = new SolidColorBrush(Colors.Transparent);
+            r220.Fill = new SolidColorBrush(Colors.Transparent);
+            r221.Fill = new SolidColorBrush(Colors.Transparent);
+            r222.Fill = new SolidColorBrush(Colors.Transparent);
+            r223.Fill = new SolidColorBrush(Colors.Transparent);
+            r224.Fill = new SolidColorBrush(Colors.Transparent);
+            r225.Fill = new SolidColorBrush(Colors.Transparent);
+            r226.Fill = new SolidColorBrush(Colors.Transparent);
+            r227.Fill = new SolidColorBrush(Colors.Transparent);
+            r228.Fill = new SolidColorBrush(Colors.Transparent);
+            r229.Fill = new SolidColorBrush(Colors.Transparent);
+            r230.Fill = new SolidColorBrush(Colors.Transparent);
+            r231.Fill = new SolidColorBrush(Colors.Transparent);
+            r232.Fill = new SolidColorBrush(Colors.Transparent);
+            r233.Fill = new SolidColorBrush(Colors.Transparent);
+            r234.Fill = new SolidColorBrush(Colors.Transparent);
+            r235.Fill = new SolidColorBrush(Colors.Transparent);
+            r236.Fill = new SolidColorBrush(Colors.Transparent);
+            r237.Fill = new SolidColorBrush(Colors.Transparent);
+            r238.Fill = new SolidColorBrush(Colors.Transparent);
+            r239.Fill = new SolidColorBrush(Colors.Transparent);
+            r240.Fill = new SolidColorBrush(Colors.Transparent);
+            r241.Fill = new SolidColorBrush(Colors.Transparent);
+            r242.Fill = new SolidColorBrush(Colors.Transparent);
+            r243.Fill = new SolidColorBrush(Colors.Transparent);
+            r244.Fill = new SolidColorBrush(Colors.Transparent);
+            r245.Fill = new SolidColorBrush(Colors.Transparent);
+            r246.Fill = new SolidColorBrush(Colors.Transparent);
+            r247.Fill = new SolidColorBrush(Colors.Transparent);
+            r248.Fill = new SolidColorBrush(Colors.Transparent);
+            r249.Fill = new SolidColorBrush(Colors.Transparent);
+            r250.Fill = new SolidColorBrush(Colors.Transparent);
+            r251.Fill = new SolidColorBrush(Colors.Transparent);
+            r252.Fill = new SolidColorBrush(Colors.Transparent);
+            r253.Fill = new SolidColorBrush(Colors.Transparent);
+            r254.Fill = new SolidColorBrush(Colors.Transparent);
+            r255.Fill = new SolidColorBrush(Colors.Transparent);
+            r256.Fill = new SolidColorBrush(Colors.Transparent);
+            r257.Fill = new SolidColorBrush(Colors.Transparent);
+            r258.Fill = new SolidColorBrush(Colors.Transparent);
+            r259.Fill = new SolidColorBrush(Colors.Transparent);
+            r260.Fill = new SolidColorBrush(Colors.Transparent);
+            r261.Fill = new SolidColorBrush(Colors.Transparent);
+            r262.Fill = new SolidColorBrush(Colors.Transparent);
+            r263.Fill = new SolidColorBrush(Colors.Transparent);
+            r264.Fill = new SolidColorBrush(Colors.Transparent);
+            r265.Fill = new SolidColorBrush(Colors.Transparent);
+            r266.Fill = new SolidColorBrush(Colors.Transparent);
+            r267.Fill = new SolidColorBrush(Colors.Transparent);
+            r268.Fill = new SolidColorBrush(Colors.Transparent);
+            r269.Fill = new SolidColorBrush(Colors.Transparent);
+            r270.Fill = new SolidColorBrush(Colors.Transparent);
+            r271.Fill = new SolidColorBrush(Colors.Transparent);
+            r272.Fill = new SolidColorBrush(Colors.Transparent);
+            r273.Fill = new SolidColorBrush(Colors.Transparent);
+            r274.Fill = new SolidColorBrush(Colors.Transparent);
+            r275.Fill = new SolidColorBrush(Colors.Transparent);
+            r276.Fill = new SolidColorBrush(Colors.Transparent);
+            r277.Fill = new SolidColorBrush(Colors.Transparent);
+            r278.Fill = new SolidColorBrush(Colors.Transparent);
+            r279.Fill = new SolidColorBrush(Colors.Transparent);
+            r280.Fill = new SolidColorBrush(Colors.Transparent);
+            r281.Fill = new SolidColorBrush(Colors.Transparent);
+            r282.Fill = new SolidColorBrush(Colors.Transparent);
+            r283.Fill = new SolidColorBrush(Colors.Transparent);
+            r284.Fill = new SolidColorBrush(Colors.Transparent);
+            r285.Fill = new SolidColorBrush(Colors.Transparent);
+            r286.Fill = new SolidColorBrush(Colors.Transparent);
+            r287.Fill = new SolidColorBrush(Colors.Transparent);
+            r288.Fill = new SolidColorBrush(Colors.Transparent);
+            r289.Fill = new SolidColorBrush(Colors.Transparent);
+            r290.Fill = new SolidColorBrush(Colors.Transparent);
+            r291.Fill = new SolidColorBrush(Colors.Transparent);
+            r292.Fill = new SolidColorBrush(Colors.Transparent);
+            r293.Fill = new SolidColorBrush(Colors.Transparent);
+            r294.Fill = new SolidColorBrush(Colors.Transparent);
+            r295.Fill = new SolidColorBrush(Colors.Transparent);
+            r296.Fill = new SolidColorBrush(Colors.Transparent);
+            r297.Fill = new SolidColorBrush(Colors.Transparent);
+            r298.Fill = new SolidColorBrush(Colors.Transparent);
+            r299.Fill = new SolidColorBrush(Colors.Transparent);
+            r300.Fill = new SolidColorBrush(Colors.Transparent);
+            r301.Fill = new SolidColorBrush(Colors.Transparent);
+            r302.Fill = new SolidColorBrush(Colors.Transparent);
+            r303.Fill = new SolidColorBrush(Colors.Transparent);
+            r304.Fill = new SolidColorBrush(Colors.Transparent);
+            r305.Fill = new SolidColorBrush(Colors.Transparent);
+            r306.Fill = new SolidColorBrush(Colors.Transparent);
+            r307.Fill = new SolidColorBrush(Colors.Transparent);
+            r308.Fill = new SolidColorBrush(Colors.Transparent);
+            r309.Fill = new SolidColorBrush(Colors.Transparent);
+            r310.Fill = new SolidColorBrush(Colors.Transparent);
+            r311.Fill = new SolidColorBrush(Colors.Transparent);
+            r312.Fill = new SolidColorBrush(Colors.Transparent);
+            r313.Fill = new SolidColorBrush(Colors.Transparent);
+            r314.Fill = new SolidColorBrush(Colors.Transparent);
+            r315.Fill = new SolidColorBrush(Colors.Transparent);
+            r316.Fill = new SolidColorBrush(Colors.Transparent);
+            r317.Fill = new SolidColorBrush(Colors.Transparent);
+            r318.Fill = new SolidColorBrush(Colors.Transparent);
+            r319.Fill = new SolidColorBrush(Colors.Transparent);
+            r320.Fill = new SolidColorBrush(Colors.Transparent);
+            r321.Fill = new SolidColorBrush(Colors.Transparent);
+            r322.Fill = new SolidColorBrush(Colors.Transparent);
+            r323.Fill = new SolidColorBrush(Colors.Transparent);
+            r324.Fill = new SolidColorBrush(Colors.Transparent);
+            r325.Fill = new SolidColorBrush(Colors.Transparent);
+            r326.Fill = new SolidColorBrush(Colors.Transparent);
+            r327.Fill = new SolidColorBrush(Colors.Transparent);
+            r328.Fill = new SolidColorBrush(Colors.Transparent);
+            r329.Fill = new SolidColorBrush(Colors.Transparent);
+            r330.Fill = new SolidColorBrush(Colors.Transparent);
+            r331.Fill = new SolidColorBrush(Colors.Transparent);
+            r332.Fill = new SolidColorBrush(Colors.Transparent);
+            r333.Fill = new SolidColorBrush(Colors.Transparent);
+            r334.Fill = new SolidColorBrush(Colors.Transparent);
+            r335.Fill = new SolidColorBrush(Colors.Transparent);
+            t0.Text = "";
+            t1.Text = "";
+            t2.Text = "";
+            t3.Text = "";
+            t4.Text = "";
+            t5.Text = "";
+            t6.Text = "";
+            t7.Text = "";
+            t8.Text = "";
+            t9.Text = "";
+            t10.Text = "";
+            t11.Text = "";
+            t12.Text = "";
+            t13.Text = "";
+            t14.Text = "";
+            t15.Text = "";
+            t16.Text = "";
+            t17.Text = "";
+            t18.Text = "";
+            t19.Text = "";
+            t20.Text = "";
+            t21.Text = "";
+            t22.Text = "";
+            t23.Text = "";
+            t24.Text = "";
+            t25.Text = "";
+            t26.Text = "";
+            t27.Text = "";
+            t28.Text = "";
+            t29.Text = "";
+            t30.Text = "";
+            t31.Text = "";
+            t32.Text = "";
+            t33.Text = "";
+            t34.Text = "";
+            t35.Text = "";
+            t36.Text = "";
+            t37.Text = "";
+            t38.Text = "";
+            t39.Text = "";
+            t40.Text = "";
+            t41.Text = "";
+            t42.Text = "";
+            t43.Text = "";
+            t44.Text = "";
+            t45.Text = "";
+            t46.Text = "";
+            t47.Text = "";
+            t48.Text = "";
+            t49.Text = "";
+            t50.Text = "";
+            t51.Text = "";
+            t52.Text = "";
+            t53.Text = "";
+            t54.Text = "";
+            t55.Text = "";
+            t56.Text = "";
+            t57.Text = "";
+            t58.Text = "";
+            t59.Text = "";
+            t60.Text = "";
+            t61.Text = "";
+            t62.Text = "";
+            t63.Text = "";
+            t64.Text = "";
+            t65.Text = "";
+            t66.Text = "";
+            t67.Text = "";
+            t68.Text = "";
+            t69.Text = "";
+            t70.Text = "";
+            t71.Text = "";
+            t72.Text = "";
+            t73.Text = "";
+            t74.Text = "";
+            t75.Text = "";
+            t76.Text = "";
+            t77.Text = "";
+            t78.Text = "";
+            t79.Text = "";
+            t80.Text = "";
+            t81.Text = "";
+            t82.Text = "";
+            t83.Text = "";
+            t84.Text = "";
+            t85.Text = "";
+            t86.Text = "";
+            t87.Text = "";
+            t88.Text = "";
+            t89.Text = "";
+            t90.Text = "";
+            t91.Text = "";
+            t92.Text = "";
+            t93.Text = "";
+            t94.Text = "";
+            t95.Text = "";
+            t96.Text = "";
+            t97.Text = "";
+            t98.Text = "";
+            t99.Text = "";
+            t100.Text = "";
+            t101.Text = "";
+            t102.Text = "";
+            t103.Text = "";
+            t104.Text = "";
+            t105.Text = "";
+            t106.Text = "";
+            t107.Text = "";
+            t108.Text = "";
+            t109.Text = "";
+            t110.Text = "";
+            t111.Text = "";
+            t112.Text = "";
+            t113.Text = "";
+            t114.Text = "";
+            t115.Text = "";
+            t116.Text = "";
+            t117.Text = "";
+            t118.Text = "";
+            t119.Text = "";
+            t120.Text = "";
+            t121.Text = "";
+            t122.Text = "";
+            t123.Text = "";
+            t124.Text = "";
+            t125.Text = "";
+            t126.Text = "";
+            t127.Text = "";
+            t128.Text = "";
+            t129.Text = "";
+            t130.Text = "";
+            t131.Text = "";
+            t132.Text = "";
+            t133.Text = "";
+            t134.Text = "";
+            t135.Text = "";
+            t136.Text = "";
+            t137.Text = "";
+            t138.Text = "";
+            t139.Text = "";
+            t140.Text = "";
+            t141.Text = "";
+            t142.Text = "";
+            t143.Text = "";
+            t144.Text = "";
+            t145.Text = "";
+            t146.Text = "";
+            t147.Text = "";
+            t148.Text = "";
+            t149.Text = "";
+            t150.Text = "";
+            t151.Text = "";
+            t152.Text = "";
+            t153.Text = "";
+            t154.Text = "";
+            t155.Text = "";
+            t156.Text = "";
+            t157.Text = "";
+            t158.Text = "";
+            t159.Text = "";
+            t160.Text = "";
+            t161.Text = "";
+            t162.Text = "";
+            t163.Text = "";
+            t164.Text = "";
+            t165.Text = "";
+            t166.Text = "";
+            t167.Text = "";
+            t168.Text = "";
+            t169.Text = "";
+            t170.Text = "";
+            t171.Text = "";
+            t172.Text = "";
+            t173.Text = "";
+            t174.Text = "";
+            t175.Text = "";
+            t176.Text = "";
+            t177.Text = "";
+            t178.Text = "";
+            t179.Text = "";
+            t180.Text = "";
+            t181.Text = "";
+            t182.Text = "";
+            t183.Text = "";
+            t184.Text = "";
+            t185.Text = "";
+            t186.Text = "";
+            t187.Text = "";
+            t188.Text = "";
+            t189.Text = "";
+            t190.Text = "";
+            t191.Text = "";
+            t192.Text = "";
+            t193.Text = "";
+            t194.Text = "";
+            t195.Text = "";
+            t196.Text = "";
+            t197.Text = "";
+            t198.Text = "";
+            t199.Text = "";
+            t200.Text = "";
+            t201.Text = "";
+            t202.Text = "";
+            t203.Text = "";
+            t204.Text = "";
+            t205.Text = "";
+            t206.Text = "";
+            t207.Text = "";
+            t208.Text = "";
+            t209.Text = "";
+            t210.Text = "";
+            t211.Text = "";
+            t212.Text = "";
+            t213.Text = "";
+            t214.Text = "";
+            t215.Text = "";
+            t216.Text = "";
+            t217.Text = "";
+            t218.Text = "";
+            t219.Text = "";
+            t220.Text = "";
+            t221.Text = "";
+            t222.Text = "";
+            t223.Text = "";
+            t224.Text = "";
+            t225.Text = "";
+            t226.Text = "";
+            t227.Text = "";
+            t228.Text = "";
+            t229.Text = "";
+            t230.Text = "";
+            t231.Text = "";
+            t232.Text = "";
+            t233.Text = "";
+            t234.Text = "";
+            t235.Text = "";
+            t236.Text = "";
+            t237.Text = "";
+            t238.Text = "";
+            t239.Text = "";
+            t240.Text = "";
+            t241.Text = "";
+            t242.Text = "";
+            t243.Text = "";
+            t244.Text = "";
+            t245.Text = "";
+            t246.Text = "";
+            t247.Text = "";
+            t248.Text = "";
+            t249.Text = "";
+            t250.Text = "";
+            t251.Text = "";
+            t252.Text = "";
+            t253.Text = "";
+            t254.Text = "";
+            t255.Text = "";
+            t256.Text = "";
+            t257.Text = "";
+            t258.Text = "";
+            t259.Text = "";
+            t260.Text = "";
+            t261.Text = "";
+            t262.Text = "";
+            t263.Text = "";
+            t264.Text = "";
+            t265.Text = "";
+            t266.Text = "";
+            t267.Text = "";
+            t268.Text = "";
+            t269.Text = "";
+            t270.Text = "";
+            t271.Text = "";
+            t272.Text = "";
+            t273.Text = "";
+            t274.Text = "";
+            t275.Text = "";
+            t276.Text = "";
+            t277.Text = "";
+            t278.Text = "";
+            t279.Text = "";
+            t280.Text = "";
+            t281.Text = "";
+            t282.Text = "";
+            t283.Text = "";
+            t284.Text = "";
+            t285.Text = "";
+            t286.Text = "";
+            t287.Text = "";
+            t288.Text = "";
+            t289.Text = "";
+            t290.Text = "";
+            t291.Text = "";
+            t292.Text = "";
+            t293.Text = "";
+            t294.Text = "";
+            t295.Text = "";
+            t296.Text = "";
+            t297.Text = "";
+            t298.Text = "";
+            t299.Text = "";
+            t300.Text = "";
+            t301.Text = "";
+            t302.Text = "";
+            t303.Text = "";
+            t304.Text = "";
+            t305.Text = "";
+            t306.Text = "";
+            t307.Text = "";
+            t308.Text = "";
+            t309.Text = "";
+            t310.Text = "";
+            t311.Text = "";
+            t312.Text = "";
+            t313.Text = "";
+            t314.Text = "";
+            t315.Text = "";
+            t316.Text = "";
+            t317.Text = "";
+            t318.Text = "";
+            t319.Text = "";
+            t320.Text = "";
+            t321.Text = "";
+            t322.Text = "";
+            t323.Text = "";
+            t324.Text = "";
+            t325.Text = "";
+            t326.Text = "";
+            t327.Text = "";
+            t328.Text = "";
+            t329.Text = "";
+            t330.Text = "";
+            t331.Text = "";
+            t332.Text = "";
+            t333.Text = "";
+            t334.Text = "";
+            t335.Text = "";
         }
 
         private void DisplayPanels()
@@ -1053,27 +1731,40 @@ namespace Plan
 
         private async void RecognizeCalendar()
         {
-            var InkRecognizer = new InkRecognizerContainer();
-            if (InkRecognizer != null)
+            string s = EventText.Text;
+            if (s != "Cancelled." || s != "" || s != "Please try again." ||
+                s != "Deleted." || s.IndexOf("Please select") > 0 ||
+                s.IndexOf("Please try") > 0 || s.IndexOf("Event registered") > 0 ||
+                s.IndexOf("Select time for") > 0)
             {
-                try
+                ResultText = s;
+                EventText.Text = "Select time for: " + s;
+                SetTime = true;
+            }
+            else
+            {
+                var InkRecognizer = new InkRecognizerContainer();
+                if (InkRecognizer != null)
                 {
-
-                    var recognitionResults = await InkRecognizer.RecognizeAsync(this.CalendarInk.InkPresenter.StrokeContainer, InkRecognitionTarget.All);
-                    string recognizedText = string.Join(" ", recognitionResults.Select(i => i.GetTextCandidates()[0]));
-                    this.CalendarInk.InkPresenter.StrokeContainer.Clear();
-                    ResultText = recognizedText;
-                    if (!ProMode) EventText.Text = "Select time for: " + recognizedText+".";
-                    SetTime = true;
-                    if (ProMode)
+                    try
                     {
-                        RegisterEvent();
-                        Refresh();
+
+                        var recognitionResults = await InkRecognizer.RecognizeAsync(this.CalendarInk.InkPresenter.StrokeContainer, InkRecognitionTarget.All);
+                        string recognizedText = string.Join(" ", recognitionResults.Select(i => i.GetTextCandidates()[0]));
+                        this.CalendarInk.InkPresenter.StrokeContainer.Clear();
+                        ResultText = recognizedText;
+                        if (!ProMode) EventText.Text = "Select time for: " + recognizedText;
+                        SetTime = true;
+                        if (ProMode)
+                        {
+                            RegisterEvent();
+                            Refresh();
+                        }
                     }
-                }
-                catch
-                {
-                    EventText.Text = "Please try again.";
+                    catch
+                    {
+                        EventText.Text = "Please try again.";
+                    }
                 }
             }
         }
@@ -1180,30 +1871,24 @@ namespace Plan
                 this.CalendarInk.InkPresenter.StrokeContainer.Clear();
                 return;
             }
-            
+
             CalEvent toDelete = null;
             
-
-            try
+            DateTime start = new DateTime(SaveYear, SaveMonth, SaveDay, 0, 0, 0);
+            DateTime end = new DateTime(SaveYear, SaveMonth, SaveDay, 23, 59, 59).AddDays(6);            int count = Events.Count;
+            for (i = 0; i < count; i++)
             {
-                
-                Events.ForEach(delegate(CalEvent e)
+                CalEvent e = Events[i];
+                int lowbound = start.CompareTo(e.EventTime.Add(e.Duration)); // start 7days < end time
+                int upbound = end.CompareTo(e.EventTime); // start time < end 7days
+                if (lowbound <= 0 && upbound >= 0)
                 {
-                    DateTime start = new DateTime(SaveYear, SaveMonth, SaveDay, 0, 0, 0);
-                    DateTime end = new DateTime(SaveYear, SaveMonth, SaveDay, 23, 59, 59).AddDays(6);
-                    int lowbound = start.CompareTo(e.EventTime.Add(e.Duration)); // start 7days < end time
-                    int upbound = end.CompareTo(e.EventTime); // start time < end 7days
-                    if (lowbound <= 0 && upbound >= 0)
-                    {
-                        if (startI <= e.EndI ||  endI <= e.StartI)
-                        Events.Remove(e);
-                    }
-                });
+
+                    if (startI <= e.EndI ||  endI <= e.StartI)
+                    toDelete = e;
+                }
             }
-            catch
-            {
-            }
-            // if (toDelete != null) Events.Remove(toDelete);
+            if (toDelete != null) Events.Remove(toDelete);
             
             Refresh();
         }

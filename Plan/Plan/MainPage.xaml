@@ -52,19 +52,19 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0"/>
                 <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width ="3*" MinWidth="150" />
+                <ColumnDefinition Width ="175" MinWidth="175" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="150" />
+                <ColumnDefinition Width ="175" MinWidth="175" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="150" />
+                <ColumnDefinition Width ="175" MinWidth="175" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="150" />
+                <ColumnDefinition Width ="175" MinWidth="175" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="150" />
+                <ColumnDefinition Width ="175" MinWidth="175" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="150" />
+                <ColumnDefinition Width ="175" MinWidth="175" />
                 <ColumnDefinition Width ="1" />
-                <ColumnDefinition Width ="3*" MinWidth="150" />
+                <ColumnDefinition Width ="175" MinWidth="175" />
                 <ColumnDefinition Width ="1" />
                 <ColumnDefinition Width ="1*" MinWidth="30"/>
             </Grid.ColumnDefinitions>
@@ -91,19 +91,19 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width ="150"/>
                     <ColumnDefinition Width ="1"/>
-                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="175" MinWidth="175" />
                     <ColumnDefinition Width ="1"/>
-                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="175" MinWidth="175" />
                     <ColumnDefinition Width ="1"/>
-                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="175" MinWidth="175" />
                     <ColumnDefinition Width ="1"/>
-                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="175" MinWidth="175" />
                     <ColumnDefinition Width ="1"/>
-                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="175" MinWidth="175" />
                     <ColumnDefinition Width ="1"/>
-                    <ColumnDefinition Width ="3*" MinWidth="150" />
+                    <ColumnDefinition Width ="175" MinWidth="175" />
                     <ColumnDefinition Width ="1"/>
-                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="175" MinWidth="175" />
                     <ColumnDefinition Width ="1"/>
                     <ColumnDefinition Width ="1*" MinWidth="30"  />
                 </Grid.ColumnDefinitions>
@@ -289,344 +289,347 @@
                 <Path Grid.Row="0" Grid.Column="11" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
                 <Path Grid.Row="0" Grid.Column="13" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
                 <Path Grid.Row="0" Grid.Column="15" Data="M150,27 L150,83.8889" Fill="LightGray" Margin="0,0.167,0,0" Grid.RowSpan="95" Stretch="Fill" Stroke="LightGray" UseLayoutRounding="False" d:LayoutOverrides="TopPosition, BottomPosition"/>
-<Rectangle x:Name="r0" Grid.Row="0" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r1" Grid.Row="2" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r2" Grid.Row="4" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r3" Grid.Row="6" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r4" Grid.Row="8" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r5" Grid.Row="10" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r6" Grid.Row="12" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r7" Grid.Row="14" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r8" Grid.Row="16" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r9" Grid.Row="18" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r10" Grid.Row="20" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r11" Grid.Row="22" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r12" Grid.Row="24" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r13" Grid.Row="26" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r14" Grid.Row="28" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r15" Grid.Row="30" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r16" Grid.Row="32" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r17" Grid.Row="34" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r18" Grid.Row="36" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r19" Grid.Row="38" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r20" Grid.Row="40" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r21" Grid.Row="42" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r22" Grid.Row="44" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r23" Grid.Row="46" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r24" Grid.Row="48" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r25" Grid.Row="50" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r26" Grid.Row="52" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r27" Grid.Row="54" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r28" Grid.Row="56" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r29" Grid.Row="58" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r30" Grid.Row="60" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r31" Grid.Row="62" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r32" Grid.Row="64" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r33" Grid.Row="66" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r34" Grid.Row="68" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r35" Grid.Row="70" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r36" Grid.Row="72" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r37" Grid.Row="74" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r38" Grid.Row="76" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r39" Grid.Row="78" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r40" Grid.Row="80" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r41" Grid.Row="82" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r42" Grid.Row="84" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r43" Grid.Row="86" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r44" Grid.Row="88" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r45" Grid.Row="90" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r46" Grid.Row="92" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r47" Grid.Row="94" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r48" Grid.Row="0" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r49" Grid.Row="2" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r50" Grid.Row="4" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r51" Grid.Row="6" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r52" Grid.Row="8" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r53" Grid.Row="10" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r54" Grid.Row="12" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r55" Grid.Row="14" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r56" Grid.Row="16" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r57" Grid.Row="18" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r58" Grid.Row="20" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r59" Grid.Row="22" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r60" Grid.Row="24" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r61" Grid.Row="26" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r62" Grid.Row="28" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r63" Grid.Row="30" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r64" Grid.Row="32" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r65" Grid.Row="34" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r66" Grid.Row="36" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r67" Grid.Row="38" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r68" Grid.Row="40" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r69" Grid.Row="42" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r70" Grid.Row="44" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r71" Grid.Row="46" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r72" Grid.Row="48" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r73" Grid.Row="50" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r74" Grid.Row="52" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r75" Grid.Row="54" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r76" Grid.Row="56" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r77" Grid.Row="58" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r78" Grid.Row="60" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r79" Grid.Row="62" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r80" Grid.Row="64" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r81" Grid.Row="66" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r82" Grid.Row="68" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r83" Grid.Row="70" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r84" Grid.Row="72" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r85" Grid.Row="74" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r86" Grid.Row="76" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r87" Grid.Row="78" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r88" Grid.Row="80" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r89" Grid.Row="82" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r90" Grid.Row="84" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r91" Grid.Row="86" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r92" Grid.Row="88" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r93" Grid.Row="90" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r94" Grid.Row="92" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r95" Grid.Row="94" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r96" Grid.Row="0" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r97" Grid.Row="2" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r98" Grid.Row="4" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r99" Grid.Row="6" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r100" Grid.Row="8" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r101" Grid.Row="10" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r102" Grid.Row="12" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r103" Grid.Row="14" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r104" Grid.Row="16" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r105" Grid.Row="18" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r106" Grid.Row="20" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r107" Grid.Row="22" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r108" Grid.Row="24" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r109" Grid.Row="26" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r110" Grid.Row="28" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r111" Grid.Row="30" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r112" Grid.Row="32" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r113" Grid.Row="34" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r114" Grid.Row="36" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r115" Grid.Row="38" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r116" Grid.Row="40" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r117" Grid.Row="42" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r118" Grid.Row="44" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r119" Grid.Row="46" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r120" Grid.Row="48" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r121" Grid.Row="50" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r122" Grid.Row="52" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r123" Grid.Row="54" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r124" Grid.Row="56" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r125" Grid.Row="58" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r126" Grid.Row="60" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r127" Grid.Row="62" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r128" Grid.Row="64" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r129" Grid.Row="66" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r130" Grid.Row="68" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r131" Grid.Row="70" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r132" Grid.Row="72" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r133" Grid.Row="74" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r134" Grid.Row="76" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r135" Grid.Row="78" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r136" Grid.Row="80" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r137" Grid.Row="82" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r138" Grid.Row="84" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r139" Grid.Row="86" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r140" Grid.Row="88" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r141" Grid.Row="90" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r142" Grid.Row="92" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r143" Grid.Row="94" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r144" Grid.Row="0" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r145" Grid.Row="2" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r146" Grid.Row="4" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r147" Grid.Row="6" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r148" Grid.Row="8" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r149" Grid.Row="10" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r150" Grid.Row="12" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r151" Grid.Row="14" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r152" Grid.Row="16" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r153" Grid.Row="18" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r154" Grid.Row="20" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r155" Grid.Row="22" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r156" Grid.Row="24" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r157" Grid.Row="26" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r158" Grid.Row="28" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r159" Grid.Row="30" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r160" Grid.Row="32" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r161" Grid.Row="34" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r162" Grid.Row="36" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r163" Grid.Row="38" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r164" Grid.Row="40" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r165" Grid.Row="42" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r166" Grid.Row="44" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r167" Grid.Row="46" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r168" Grid.Row="48" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r169" Grid.Row="50" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r170" Grid.Row="52" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r171" Grid.Row="54" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r172" Grid.Row="56" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r173" Grid.Row="58" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r174" Grid.Row="60" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r175" Grid.Row="62" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r176" Grid.Row="64" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r177" Grid.Row="66" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r178" Grid.Row="68" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r179" Grid.Row="70" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r180" Grid.Row="72" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r181" Grid.Row="74" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r182" Grid.Row="76" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r183" Grid.Row="78" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r184" Grid.Row="80" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r185" Grid.Row="82" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r186" Grid.Row="84" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r187" Grid.Row="86" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r188" Grid.Row="88" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r189" Grid.Row="90" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r190" Grid.Row="92" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r191" Grid.Row="94" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r192" Grid.Row="0" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r193" Grid.Row="2" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r194" Grid.Row="4" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r195" Grid.Row="6" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r196" Grid.Row="8" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r197" Grid.Row="10" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r198" Grid.Row="12" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r199" Grid.Row="14" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r200" Grid.Row="16" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r201" Grid.Row="18" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r202" Grid.Row="20" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r203" Grid.Row="22" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r204" Grid.Row="24" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r205" Grid.Row="26" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r206" Grid.Row="28" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r207" Grid.Row="30" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r208" Grid.Row="32" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r209" Grid.Row="34" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r210" Grid.Row="36" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r211" Grid.Row="38" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r212" Grid.Row="40" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r213" Grid.Row="42" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r214" Grid.Row="44" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r215" Grid.Row="46" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r216" Grid.Row="48" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r217" Grid.Row="50" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r218" Grid.Row="52" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r219" Grid.Row="54" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r220" Grid.Row="56" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r221" Grid.Row="58" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r222" Grid.Row="60" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r223" Grid.Row="62" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r224" Grid.Row="64" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r225" Grid.Row="66" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r226" Grid.Row="68" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r227" Grid.Row="70" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r228" Grid.Row="72" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r229" Grid.Row="74" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r230" Grid.Row="76" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r231" Grid.Row="78" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r232" Grid.Row="80" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r233" Grid.Row="82" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r234" Grid.Row="84" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r235" Grid.Row="86" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r236" Grid.Row="88" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r237" Grid.Row="90" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r238" Grid.Row="92" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r239" Grid.Row="94" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r240" Grid.Row="0" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r241" Grid.Row="2" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r242" Grid.Row="4" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r243" Grid.Row="6" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r244" Grid.Row="8" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r245" Grid.Row="10" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r246" Grid.Row="12" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r247" Grid.Row="14" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r248" Grid.Row="16" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r249" Grid.Row="18" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r250" Grid.Row="20" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r251" Grid.Row="22" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r252" Grid.Row="24" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r253" Grid.Row="26" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r254" Grid.Row="28" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r255" Grid.Row="30" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r256" Grid.Row="32" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r257" Grid.Row="34" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r258" Grid.Row="36" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r259" Grid.Row="38" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r260" Grid.Row="40" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r261" Grid.Row="42" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r262" Grid.Row="44" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r263" Grid.Row="46" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r264" Grid.Row="48" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r265" Grid.Row="50" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r266" Grid.Row="52" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r267" Grid.Row="54" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r268" Grid.Row="56" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r269" Grid.Row="58" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r270" Grid.Row="60" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r271" Grid.Row="62" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r272" Grid.Row="64" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r273" Grid.Row="66" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r274" Grid.Row="68" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r275" Grid.Row="70" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r276" Grid.Row="72" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r277" Grid.Row="74" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r278" Grid.Row="76" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r279" Grid.Row="78" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r280" Grid.Row="80" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r281" Grid.Row="82" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r282" Grid.Row="84" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r283" Grid.Row="86" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r284" Grid.Row="88" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r285" Grid.Row="90" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r286" Grid.Row="92" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r287" Grid.Row="94" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r288" Grid.Row="0" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r289" Grid.Row="2" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r290" Grid.Row="4" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r291" Grid.Row="6" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r292" Grid.Row="8" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r293" Grid.Row="10" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r294" Grid.Row="12" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r295" Grid.Row="14" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r296" Grid.Row="16" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r297" Grid.Row="18" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r298" Grid.Row="20" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r299" Grid.Row="22" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r300" Grid.Row="24" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r301" Grid.Row="26" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r302" Grid.Row="28" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r303" Grid.Row="30" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r304" Grid.Row="32" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r305" Grid.Row="34" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r306" Grid.Row="36" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r307" Grid.Row="38" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r308" Grid.Row="40" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r309" Grid.Row="42" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r310" Grid.Row="44" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r311" Grid.Row="46" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r312" Grid.Row="48" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r313" Grid.Row="50" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r314" Grid.Row="52" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r315" Grid.Row="54" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r316" Grid.Row="56" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r317" Grid.Row="58" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r318" Grid.Row="60" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r319" Grid.Row="62" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r320" Grid.Row="64" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r321" Grid.Row="66" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r322" Grid.Row="68" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r323" Grid.Row="70" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r324" Grid.Row="72" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r325" Grid.Row="74" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r326" Grid.Row="76" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r327" Grid.Row="78" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r328" Grid.Row="80" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r329" Grid.Row="82" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r330" Grid.Row="84" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r331" Grid.Row="86" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r332" Grid.Row="88" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r333" Grid.Row="90" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r334" Grid.Row="92" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<Rectangle x:Name="r335" Grid.Row="94" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent\ PointerEntered="Rectangle_PointerEntered"/>
-<TextBlock x:Name="textBlock" Margin="10,0" Grid.Row="96" TextWrapping="Wrap" Text="Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem" Grid.ColumnSpan="15" d:LayoutOverrides="LeftMargin, RightMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" SelectionHighlightColor="#FF9A9A9A" FontSize="24" HorizontalAlignment="Center" Foreground="#FF959595"/>
-                <InkCanvas x:Name="CalendarInk" Grid.ColumnSpan="16" Grid.Column="1" Margin="-20,-20,20,10" Grid.RowSpan="97" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
+
+                <Rectangle x:Name="r0" Grid.Row="0" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r0"/>
+                <Rectangle x:Name="r1" Grid.Row="2" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r1"/>
+                <Rectangle x:Name="r2" Grid.Row="4" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r2"/>
+                <Rectangle x:Name="r3" Grid.Row="6" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r3"/>
+                <Rectangle x:Name="r4" Grid.Row="8" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r4"/>
+                <Rectangle x:Name="r5" Grid.Row="10" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r5"/>
+                <Rectangle x:Name="r6" Grid.Row="12" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r6"/>
+                <Rectangle x:Name="r7" Grid.Row="14" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r7"/>
+                <Rectangle x:Name="r8" Grid.Row="16" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r8"/>
+                <Rectangle x:Name="r9" Grid.Row="18" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r9"/>
+                <Rectangle x:Name="r10" Grid.Row="20" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r10"/>
+                <Rectangle x:Name="r11" Grid.Row="22" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r11"/>
+                <Rectangle x:Name="r12" Grid.Row="24" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r12"/>
+                <Rectangle x:Name="r13" Grid.Row="26" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r13"/>
+                <Rectangle x:Name="r14" Grid.Row="28" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r14"/>
+                <Rectangle x:Name="r15" Grid.Row="30" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r15"/>
+                <Rectangle x:Name="r16" Grid.Row="32" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r16"/>
+                <Rectangle x:Name="r17" Grid.Row="34" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r17"/>
+                <Rectangle x:Name="r18" Grid.Row="36" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r18"/>
+                <Rectangle x:Name="r19" Grid.Row="38" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r19"/>
+                <Rectangle x:Name="r20" Grid.Row="40" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r20"/>
+                <Rectangle x:Name="r21" Grid.Row="42" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r21"/>
+                <Rectangle x:Name="r22" Grid.Row="44" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r22"/>
+                <Rectangle x:Name="r23" Grid.Row="46" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r23"/>
+                <Rectangle x:Name="r24" Grid.Row="48" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r24"/>
+                <Rectangle x:Name="r25" Grid.Row="50" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r25"/>
+                <Rectangle x:Name="r26" Grid.Row="52" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r26"/>
+                <Rectangle x:Name="r27" Grid.Row="54" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r27"/>
+                <Rectangle x:Name="r28" Grid.Row="56" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r28"/>
+                <Rectangle x:Name="r29" Grid.Row="58" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r29"/>
+                <Rectangle x:Name="r30" Grid.Row="60" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r30"/>
+                <Rectangle x:Name="r31" Grid.Row="62" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r31"/>
+                <Rectangle x:Name="r32" Grid.Row="64" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r32"/>
+                <Rectangle x:Name="r33" Grid.Row="66" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r33"/>
+                <Rectangle x:Name="r34" Grid.Row="68" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r34"/>
+                <Rectangle x:Name="r35" Grid.Row="70" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r35"/>
+                <Rectangle x:Name="r36" Grid.Row="72" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r36"/>
+                <Rectangle x:Name="r37" Grid.Row="74" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r37"/>
+                <Rectangle x:Name="r38" Grid.Row="76" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r38"/>
+                <Rectangle x:Name="r39" Grid.Row="78" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r39"/>
+                <Rectangle x:Name="r40" Grid.Row="80" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r40"/>
+                <Rectangle x:Name="r41" Grid.Row="82" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r41"/>
+                <Rectangle x:Name="r42" Grid.Row="84" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r42"/>
+                <Rectangle x:Name="r43" Grid.Row="86" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r43"/>
+                <Rectangle x:Name="r44" Grid.Row="88" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r44"/>
+                <Rectangle x:Name="r45" Grid.Row="90" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r45"/>
+                <Rectangle x:Name="r46" Grid.Row="92" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r46"/>
+                <Rectangle x:Name="r47" Grid.Row="94" Grid.Column="2" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r47"/>
+                <Rectangle x:Name="r48" Grid.Row="0" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r48"/>
+                <Rectangle x:Name="r49" Grid.Row="2" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r49"/>
+                <Rectangle x:Name="r50" Grid.Row="4" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r50"/>
+                <Rectangle x:Name="r51" Grid.Row="6" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r51"/>
+                <Rectangle x:Name="r52" Grid.Row="8" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r52"/>
+                <Rectangle x:Name="r53" Grid.Row="10" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r53"/>
+                <Rectangle x:Name="r54" Grid.Row="12" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r54"/>
+                <Rectangle x:Name="r55" Grid.Row="14" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r55"/>
+                <Rectangle x:Name="r56" Grid.Row="16" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r56"/>
+                <Rectangle x:Name="r57" Grid.Row="18" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r57"/>
+                <Rectangle x:Name="r58" Grid.Row="20" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r58"/>
+                <Rectangle x:Name="r59" Grid.Row="22" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r59"/>
+                <Rectangle x:Name="r60" Grid.Row="24" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r60"/>
+                <Rectangle x:Name="r61" Grid.Row="26" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r61"/>
+                <Rectangle x:Name="r62" Grid.Row="28" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r62"/>
+                <Rectangle x:Name="r63" Grid.Row="30" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r63"/>
+                <Rectangle x:Name="r64" Grid.Row="32" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r64"/>
+                <Rectangle x:Name="r65" Grid.Row="34" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r65"/>
+                <Rectangle x:Name="r66" Grid.Row="36" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r66"/>
+                <Rectangle x:Name="r67" Grid.Row="38" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r67"/>
+                <Rectangle x:Name="r68" Grid.Row="40" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r68"/>
+                <Rectangle x:Name="r69" Grid.Row="42" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r69"/>
+                <Rectangle x:Name="r70" Grid.Row="44" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r70"/>
+                <Rectangle x:Name="r71" Grid.Row="46" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r71"/>
+                <Rectangle x:Name="r72" Grid.Row="48" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r72"/>
+                <Rectangle x:Name="r73" Grid.Row="50" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r73"/>
+                <Rectangle x:Name="r74" Grid.Row="52" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r74"/>
+                <Rectangle x:Name="r75" Grid.Row="54" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r75"/>
+                <Rectangle x:Name="r76" Grid.Row="56" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r76"/>
+                <Rectangle x:Name="r77" Grid.Row="58" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r77"/>
+                <Rectangle x:Name="r78" Grid.Row="60" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r78"/>
+                <Rectangle x:Name="r79" Grid.Row="62" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r79"/>
+                <Rectangle x:Name="r80" Grid.Row="64" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r80"/>
+                <Rectangle x:Name="r81" Grid.Row="66" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r81"/>
+                <Rectangle x:Name="r82" Grid.Row="68" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r82"/>
+                <Rectangle x:Name="r83" Grid.Row="70" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r83"/>
+                <Rectangle x:Name="r84" Grid.Row="72" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r84"/>
+                <Rectangle x:Name="r85" Grid.Row="74" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r85"/>
+                <Rectangle x:Name="r86" Grid.Row="76" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r86"/>
+                <Rectangle x:Name="r87" Grid.Row="78" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r87"/>
+                <Rectangle x:Name="r88" Grid.Row="80" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r88"/>
+                <Rectangle x:Name="r89" Grid.Row="82" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r89"/>
+                <Rectangle x:Name="r90" Grid.Row="84" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r90"/>
+                <Rectangle x:Name="r91" Grid.Row="86" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r91"/>
+                <Rectangle x:Name="r92" Grid.Row="88" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r92"/>
+                <Rectangle x:Name="r93" Grid.Row="90" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r93"/>
+                <Rectangle x:Name="r94" Grid.Row="92" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r94"/>
+                <Rectangle x:Name="r95" Grid.Row="94" Grid.Column="4" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r95"/>
+                <Rectangle x:Name="r96" Grid.Row="0" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r96"/>
+                <Rectangle x:Name="r97" Grid.Row="2" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r97"/>
+                <Rectangle x:Name="r98" Grid.Row="4" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r98"/>
+                <Rectangle x:Name="r99" Grid.Row="6" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r99"/>
+                <Rectangle x:Name="r100" Grid.Row="8" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r100"/>
+                <Rectangle x:Name="r101" Grid.Row="10" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r101"/>
+                <Rectangle x:Name="r102" Grid.Row="12" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r102"/>
+                <Rectangle x:Name="r103" Grid.Row="14" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r103"/>
+                <Rectangle x:Name="r104" Grid.Row="16" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r104"/>
+                <Rectangle x:Name="r105" Grid.Row="18" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r105"/>
+                <Rectangle x:Name="r106" Grid.Row="20" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r106"/>
+                <Rectangle x:Name="r107" Grid.Row="22" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r107"/>
+                <Rectangle x:Name="r108" Grid.Row="24" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r108"/>
+                <Rectangle x:Name="r109" Grid.Row="26" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r109"/>
+                <Rectangle x:Name="r110" Grid.Row="28" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r110"/>
+                <Rectangle x:Name="r111" Grid.Row="30" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r111"/>
+                <Rectangle x:Name="r112" Grid.Row="32" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r112"/>
+                <Rectangle x:Name="r113" Grid.Row="34" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r113"/>
+                <Rectangle x:Name="r114" Grid.Row="36" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r114"/>
+                <Rectangle x:Name="r115" Grid.Row="38" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r115"/>
+                <Rectangle x:Name="r116" Grid.Row="40" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r116"/>
+                <Rectangle x:Name="r117" Grid.Row="42" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r117"/>
+                <Rectangle x:Name="r118" Grid.Row="44" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r118"/>
+                <Rectangle x:Name="r119" Grid.Row="46" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r119"/>
+                <Rectangle x:Name="r120" Grid.Row="48" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r120"/>
+                <Rectangle x:Name="r121" Grid.Row="50" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r121"/>
+                <Rectangle x:Name="r122" Grid.Row="52" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r122"/>
+                <Rectangle x:Name="r123" Grid.Row="54" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r123"/>
+                <Rectangle x:Name="r124" Grid.Row="56" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r124"/>
+                <Rectangle x:Name="r125" Grid.Row="58" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r125"/>
+                <Rectangle x:Name="r126" Grid.Row="60" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r126"/>
+                <Rectangle x:Name="r127" Grid.Row="62" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r127"/>
+                <Rectangle x:Name="r128" Grid.Row="64" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r128"/>
+                <Rectangle x:Name="r129" Grid.Row="66" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r129"/>
+                <Rectangle x:Name="r130" Grid.Row="68" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r130"/>
+                <Rectangle x:Name="r131" Grid.Row="70" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r131"/>
+                <Rectangle x:Name="r132" Grid.Row="72" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r132"/>
+                <Rectangle x:Name="r133" Grid.Row="74" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r133"/>
+                <Rectangle x:Name="r134" Grid.Row="76" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r134"/>
+                <Rectangle x:Name="r135" Grid.Row="78" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r135"/>
+                <Rectangle x:Name="r136" Grid.Row="80" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r136"/>
+                <Rectangle x:Name="r137" Grid.Row="82" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r137"/>
+                <Rectangle x:Name="r138" Grid.Row="84" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r138"/>
+                <Rectangle x:Name="r139" Grid.Row="86" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r139"/>
+                <Rectangle x:Name="r140" Grid.Row="88" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r140"/>
+                <Rectangle x:Name="r141" Grid.Row="90" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r141"/>
+                <Rectangle x:Name="r142" Grid.Row="92" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r142"/>
+                <Rectangle x:Name="r143" Grid.Row="94" Grid.Column="6" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r143"/>
+                <Rectangle x:Name="r144" Grid.Row="0" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r144"/>
+                <Rectangle x:Name="r145" Grid.Row="2" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r145"/>
+                <Rectangle x:Name="r146" Grid.Row="4" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r146"/>
+                <Rectangle x:Name="r147" Grid.Row="6" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r147"/>
+                <Rectangle x:Name="r148" Grid.Row="8" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r148"/>
+                <Rectangle x:Name="r149" Grid.Row="10" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r149"/>
+                <Rectangle x:Name="r150" Grid.Row="12" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r150"/>
+                <Rectangle x:Name="r151" Grid.Row="14" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r151"/>
+                <Rectangle x:Name="r152" Grid.Row="16" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r152"/>
+                <Rectangle x:Name="r153" Grid.Row="18" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r153"/>
+                <Rectangle x:Name="r154" Grid.Row="20" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r154"/>
+                <Rectangle x:Name="r155" Grid.Row="22" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r155"/>
+                <Rectangle x:Name="r156" Grid.Row="24" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r156"/>
+                <Rectangle x:Name="r157" Grid.Row="26" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r157"/>
+                <Rectangle x:Name="r158" Grid.Row="28" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r158"/>
+                <Rectangle x:Name="r159" Grid.Row="30" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r159"/>
+                <Rectangle x:Name="r160" Grid.Row="32" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r160"/>
+                <Rectangle x:Name="r161" Grid.Row="34" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r161"/>
+                <Rectangle x:Name="r162" Grid.Row="36" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r162"/>
+                <Rectangle x:Name="r163" Grid.Row="38" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r163"/>
+                <Rectangle x:Name="r164" Grid.Row="40" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r164"/>
+                <Rectangle x:Name="r165" Grid.Row="42" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r165"/>
+                <Rectangle x:Name="r166" Grid.Row="44" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r166"/>
+                <Rectangle x:Name="r167" Grid.Row="46" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r167"/>
+                <Rectangle x:Name="r168" Grid.Row="48" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r168"/>
+                <Rectangle x:Name="r169" Grid.Row="50" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r169"/>
+                <Rectangle x:Name="r170" Grid.Row="52" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r170"/>
+                <Rectangle x:Name="r171" Grid.Row="54" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r171"/>
+                <Rectangle x:Name="r172" Grid.Row="56" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r172"/>
+                <Rectangle x:Name="r173" Grid.Row="58" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r173"/>
+                <Rectangle x:Name="r174" Grid.Row="60" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r174"/>
+                <Rectangle x:Name="r175" Grid.Row="62" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r175"/>
+                <Rectangle x:Name="r176" Grid.Row="64" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r176"/>
+                <Rectangle x:Name="r177" Grid.Row="66" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r177"/>
+                <Rectangle x:Name="r178" Grid.Row="68" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r178"/>
+                <Rectangle x:Name="r179" Grid.Row="70" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r179"/>
+                <Rectangle x:Name="r180" Grid.Row="72" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r180"/>
+                <Rectangle x:Name="r181" Grid.Row="74" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r181"/>
+                <Rectangle x:Name="r182" Grid.Row="76" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r182"/>
+                <Rectangle x:Name="r183" Grid.Row="78" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r183"/>
+                <Rectangle x:Name="r184" Grid.Row="80" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r184"/>
+                <Rectangle x:Name="r185" Grid.Row="82" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r185"/>
+                <Rectangle x:Name="r186" Grid.Row="84" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r186"/>
+                <Rectangle x:Name="r187" Grid.Row="86" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r187"/>
+                <Rectangle x:Name="r188" Grid.Row="88" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r188"/>
+                <Rectangle x:Name="r189" Grid.Row="90" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r189"/>
+                <Rectangle x:Name="r190" Grid.Row="92" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r190"/>
+                <Rectangle x:Name="r191" Grid.Row="94" Grid.Column="8" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r191"/>
+                <Rectangle x:Name="r192" Grid.Row="0" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r192"/>
+                <Rectangle x:Name="r193" Grid.Row="2" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r193"/>
+                <Rectangle x:Name="r194" Grid.Row="4" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r194"/>
+                <Rectangle x:Name="r195" Grid.Row="6" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r195"/>
+                <Rectangle x:Name="r196" Grid.Row="8" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r196"/>
+                <Rectangle x:Name="r197" Grid.Row="10" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r197"/>
+                <Rectangle x:Name="r198" Grid.Row="12" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r198"/>
+                <Rectangle x:Name="r199" Grid.Row="14" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r199"/>
+                <Rectangle x:Name="r200" Grid.Row="16" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r200"/>
+                <Rectangle x:Name="r201" Grid.Row="18" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r201"/>
+                <Rectangle x:Name="r202" Grid.Row="20" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r202"/>
+                <Rectangle x:Name="r203" Grid.Row="22" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r203"/>
+                <Rectangle x:Name="r204" Grid.Row="24" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r204"/>
+                <Rectangle x:Name="r205" Grid.Row="26" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r205"/>
+                <Rectangle x:Name="r206" Grid.Row="28" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r206"/>
+                <Rectangle x:Name="r207" Grid.Row="30" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r207"/>
+                <Rectangle x:Name="r208" Grid.Row="32" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r208"/>
+                <Rectangle x:Name="r209" Grid.Row="34" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r209"/>
+                <Rectangle x:Name="r210" Grid.Row="36" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r210"/>
+                <Rectangle x:Name="r211" Grid.Row="38" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r211"/>
+                <Rectangle x:Name="r212" Grid.Row="40" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r212"/>
+                <Rectangle x:Name="r213" Grid.Row="42" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r213"/>
+                <Rectangle x:Name="r214" Grid.Row="44" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r214"/>
+                <Rectangle x:Name="r215" Grid.Row="46" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r215"/>
+                <Rectangle x:Name="r216" Grid.Row="48" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r216"/>
+                <Rectangle x:Name="r217" Grid.Row="50" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r217"/>
+                <Rectangle x:Name="r218" Grid.Row="52" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r218"/>
+                <Rectangle x:Name="r219" Grid.Row="54" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r219"/>
+                <Rectangle x:Name="r220" Grid.Row="56" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r220"/>
+                <Rectangle x:Name="r221" Grid.Row="58" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r221"/>
+                <Rectangle x:Name="r222" Grid.Row="60" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r222"/>
+                <Rectangle x:Name="r223" Grid.Row="62" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r223"/>
+                <Rectangle x:Name="r224" Grid.Row="64" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r224"/>
+                <Rectangle x:Name="r225" Grid.Row="66" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r225"/>
+                <Rectangle x:Name="r226" Grid.Row="68" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r226"/>
+                <Rectangle x:Name="r227" Grid.Row="70" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r227"/>
+                <Rectangle x:Name="r228" Grid.Row="72" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r228"/>
+                <Rectangle x:Name="r229" Grid.Row="74" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r229"/>
+                <Rectangle x:Name="r230" Grid.Row="76" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r230"/>
+                <Rectangle x:Name="r231" Grid.Row="78" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r231"/>
+                <Rectangle x:Name="r232" Grid.Row="80" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r232"/>
+                <Rectangle x:Name="r233" Grid.Row="82" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r233"/>
+                <Rectangle x:Name="r234" Grid.Row="84" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r234"/>
+                <Rectangle x:Name="r235" Grid.Row="86" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r235"/>
+                <Rectangle x:Name="r236" Grid.Row="88" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r236"/>
+                <Rectangle x:Name="r237" Grid.Row="90" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r237"/>
+                <Rectangle x:Name="r238" Grid.Row="92" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r238"/>
+                <Rectangle x:Name="r239" Grid.Row="94" Grid.Column="10" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r239"/>
+                <Rectangle x:Name="r240" Grid.Row="0" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r240"/>
+                <Rectangle x:Name="r241" Grid.Row="2" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r241"/>
+                <Rectangle x:Name="r242" Grid.Row="4" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r242"/>
+                <Rectangle x:Name="r243" Grid.Row="6" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r243"/>
+                <Rectangle x:Name="r244" Grid.Row="8" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r244"/>
+                <Rectangle x:Name="r245" Grid.Row="10" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r245"/>
+                <Rectangle x:Name="r246" Grid.Row="12" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r246"/>
+                <Rectangle x:Name="r247" Grid.Row="14" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r247"/>
+                <Rectangle x:Name="r248" Grid.Row="16" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r248"/>
+                <Rectangle x:Name="r249" Grid.Row="18" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r249"/>
+                <Rectangle x:Name="r250" Grid.Row="20" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r250"/>
+                <Rectangle x:Name="r251" Grid.Row="22" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r251"/>
+                <Rectangle x:Name="r252" Grid.Row="24" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r252"/>
+                <Rectangle x:Name="r253" Grid.Row="26" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r253"/>
+                <Rectangle x:Name="r254" Grid.Row="28" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r254"/>
+                <Rectangle x:Name="r255" Grid.Row="30" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r255"/>
+                <Rectangle x:Name="r256" Grid.Row="32" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r256"/>
+                <Rectangle x:Name="r257" Grid.Row="34" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r257"/>
+                <Rectangle x:Name="r258" Grid.Row="36" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r258"/>
+                <Rectangle x:Name="r259" Grid.Row="38" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r259"/>
+                <Rectangle x:Name="r260" Grid.Row="40" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r260"/>
+                <Rectangle x:Name="r261" Grid.Row="42" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r261"/>
+                <Rectangle x:Name="r262" Grid.Row="44" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r262"/>
+                <Rectangle x:Name="r263" Grid.Row="46" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r263"/>
+                <Rectangle x:Name="r264" Grid.Row="48" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r264"/>
+                <Rectangle x:Name="r265" Grid.Row="50" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r265"/>
+                <Rectangle x:Name="r266" Grid.Row="52" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r266"/>
+                <Rectangle x:Name="r267" Grid.Row="54" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r267"/>
+                <Rectangle x:Name="r268" Grid.Row="56" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r268"/>
+                <Rectangle x:Name="r269" Grid.Row="58" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r269"/>
+                <Rectangle x:Name="r270" Grid.Row="60" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r270"/>
+                <Rectangle x:Name="r271" Grid.Row="62" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r271"/>
+                <Rectangle x:Name="r272" Grid.Row="64" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r272"/>
+                <Rectangle x:Name="r273" Grid.Row="66" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r273"/>
+                <Rectangle x:Name="r274" Grid.Row="68" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r274"/>
+                <Rectangle x:Name="r275" Grid.Row="70" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r275"/>
+                <Rectangle x:Name="r276" Grid.Row="72" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r276"/>
+                <Rectangle x:Name="r277" Grid.Row="74" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r277"/>
+                <Rectangle x:Name="r278" Grid.Row="76" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r278"/>
+                <Rectangle x:Name="r279" Grid.Row="78" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r279"/>
+                <Rectangle x:Name="r280" Grid.Row="80" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r280"/>
+                <Rectangle x:Name="r281" Grid.Row="82" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r281"/>
+                <Rectangle x:Name="r282" Grid.Row="84" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r282"/>
+                <Rectangle x:Name="r283" Grid.Row="86" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r283"/>
+                <Rectangle x:Name="r284" Grid.Row="88" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r284"/>
+                <Rectangle x:Name="r285" Grid.Row="90" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r285"/>
+                <Rectangle x:Name="r286" Grid.Row="92" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r286"/>
+                <Rectangle x:Name="r287" Grid.Row="94" Grid.Column="12" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r287"/>
+                <Rectangle x:Name="r288" Grid.Row="0" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r288"/>
+                <Rectangle x:Name="r289" Grid.Row="2" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r289"/>
+                <Rectangle x:Name="r290" Grid.Row="4" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r290"/>
+                <Rectangle x:Name="r291" Grid.Row="6" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r291"/>
+                <Rectangle x:Name="r292" Grid.Row="8" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r292"/>
+                <Rectangle x:Name="r293" Grid.Row="10" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r293"/>
+                <Rectangle x:Name="r294" Grid.Row="12" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r294"/>
+                <Rectangle x:Name="r295" Grid.Row="14" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r295"/>
+                <Rectangle x:Name="r296" Grid.Row="16" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r296"/>
+                <Rectangle x:Name="r297" Grid.Row="18" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r297"/>
+                <Rectangle x:Name="r298" Grid.Row="20" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r298"/>
+                <Rectangle x:Name="r299" Grid.Row="22" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r299"/>
+                <Rectangle x:Name="r300" Grid.Row="24" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r300"/>
+                <Rectangle x:Name="r301" Grid.Row="26" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r301"/>
+                <Rectangle x:Name="r302" Grid.Row="28" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r302"/>
+                <Rectangle x:Name="r303" Grid.Row="30" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r303"/>
+                <Rectangle x:Name="r304" Grid.Row="32" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r304"/>
+                <Rectangle x:Name="r305" Grid.Row="34" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r305"/>
+                <Rectangle x:Name="r306" Grid.Row="36" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r306"/>
+                <Rectangle x:Name="r307" Grid.Row="38" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r307"/>
+                <Rectangle x:Name="r308" Grid.Row="40" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r308"/>
+                <Rectangle x:Name="r309" Grid.Row="42" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r309"/>
+                <Rectangle x:Name="r310" Grid.Row="44" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r310"/>
+                <Rectangle x:Name="r311" Grid.Row="46" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r311"/>
+                <Rectangle x:Name="r312" Grid.Row="48" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r312"/>
+                <Rectangle x:Name="r313" Grid.Row="50" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r313"/>
+                <Rectangle x:Name="r314" Grid.Row="52" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r314"/>
+                <Rectangle x:Name="r315" Grid.Row="54" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r315"/>
+                <Rectangle x:Name="r316" Grid.Row="56" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r316"/>
+                <Rectangle x:Name="r317" Grid.Row="58" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r317"/>
+                <Rectangle x:Name="r318" Grid.Row="60" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r318"/>
+                <Rectangle x:Name="r319" Grid.Row="62" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r319"/>
+                <Rectangle x:Name="r320" Grid.Row="64" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r320"/>
+                <Rectangle x:Name="r321" Grid.Row="66" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r321"/>
+                <Rectangle x:Name="r322" Grid.Row="68" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r322"/>
+                <Rectangle x:Name="r323" Grid.Row="70" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r323"/>
+                <Rectangle x:Name="r324" Grid.Row="72" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r324"/>
+                <Rectangle x:Name="r325" Grid.Row="74" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r325"/>
+                <Rectangle x:Name="r326" Grid.Row="76" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r326"/>
+                <Rectangle x:Name="r327" Grid.Row="78" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r327"/>
+                <Rectangle x:Name="r328" Grid.Row="80" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r328"/>
+                <Rectangle x:Name="r329" Grid.Row="82" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r329"/>
+                <Rectangle x:Name="r330" Grid.Row="84" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r330"/>
+                <Rectangle x:Name="r331" Grid.Row="86" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r331"/>
+                <Rectangle x:Name="r332" Grid.Row="88" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r332"/>
+                <Rectangle x:Name="r333" Grid.Row="90" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r333"/>
+                <Rectangle x:Name="r334" Grid.Row="92" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r334"/>
+                <Rectangle x:Name="r335" Grid.Row="94" Grid.Column="14" Fill="Transparent" Margin="0" Stroke="Transparent" Tapped="Rectangle_Tapped" Tag="r335"/>
+                <TextBlock x:Name="textBlock1" Grid.Column="2" TextWrapping="Wrap" Text="blablablbalbalad oiadjiasjioa ioasdjoiaj askdlaskl" Grid.RowSpan="10"/>
+
+                <TextBlock x:Name="textBlock" Margin="10,0" Grid.Row="96" TextWrapping="Wrap" Text="Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem" Grid.ColumnSpan="15" d:LayoutOverrides="LeftMargin, RightMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" SelectionHighlightColor="#FF9A9A9A" FontSize="24" HorizontalAlignment="Center" Foreground="#FF959595"/>
+                <InkCanvas x:Name="CalendarInk" Grid.ColumnSpan="16" Grid.Column="1" Margin="-20,-20,20,10" Grid.RowSpan="97" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" IsHitTestVisible="False"/>
 
             </Grid>
         </ScrollViewer>

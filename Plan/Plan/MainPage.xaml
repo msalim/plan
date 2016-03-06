@@ -7,7 +7,97 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="Main" Background="#FFF2F2F2" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="70"></RowDefinition>
+            <RowDefinition Height ="1"></RowDefinition>
+            <RowDefinition Height ="100"></RowDefinition>
+            <RowDefinition Height ="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid x:Name="TextEntry">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width ="2*"/>
+                    <ColumnDefinition Width ="1"/>
+                    <ColumnDefinition Width ="3*"/>
+                </Grid.ColumnDefinitions>
+                <Path Grid.Column="1" Data="M865,10 L865,60" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="0,0,0,0" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition" Height="50"/>
+                <TextBox Grid.Column="2" x:Name="EventText" Height="70" BorderThickness="0" Padding="20,10,0,0" TextWrapping="Wrap" Text="" PlaceholderText="Write or Enter Event"
+            		d:LayoutOverrides="LeftPosition, RightPosition" Background="#FFF2F2F2" FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited"/>
+                <InkCanvas x:Name="EventCanvas" Grid.Column="2" Margin="0" d:LayoutOverrides="LeftPosition, RightPosition" Tapped="EventCanvas_Tapped"/>
+            </Grid>
+        </Grid>
 
+        <Grid x:Name="Date" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="150"/>
+                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="100"/>
+                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="1*" MinWidth="30"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <ScrollViewer 
+        HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.516,5.295" Grid.Row="3">
+
+            <Grid x:Name="Calendar" Background ="Transparent">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width ="150"/>
+                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="3*" MinWidth="100" />
+                    <ColumnDefinition Width ="1*" MinWidth="30"  />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="75"/>
+                    <RowDefinition Height ="50"/>
+                </Grid.RowDefinitions>
+                <Rectangle Grid.Column="2" Fill="Green" Margin="0" Grid.Row="24" Stroke="Black"/>
+                <InkCanvas x:Name="CalendarInk" Grid.ColumnSpan="8" Grid.Column="1" Margin="-30,-37,29,0" Grid.RowSpan="25" d:LayoutOverrides="LeftPosition, RightPosition">
+                    <InkCanvas.Resources>
+
+                    </InkCanvas.Resources>
+                </InkCanvas>
+
+            </Grid>
+        </ScrollViewer>
+        <Path Grid.Row="1" Data="M11.7708,70 L59.2708,70" Fill="Gray" HorizontalAlignment="Left" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Margin="0">
+            <Path.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Path.RenderTransform>
+        </Path>
     </Grid>
 </Page>

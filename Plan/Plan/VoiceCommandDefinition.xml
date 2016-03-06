@@ -1,4 +1,4 @@
-﻿<? xml version = "1.0" encoding  = "utf-8" ?> 
+﻿<?xml version = "1.0" encoding  = "utf-8" ?> 
 
  
 
@@ -21,7 +21,7 @@
 
  
 
-<Command Name = "DoPlan"> 
+<Command Name = "planner"> 
 
 <Example> Plan to Hack some Bricks today!</Example>
 

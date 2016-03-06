@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Media.SpeechRecognition;
 
 namespace Plan
 {
@@ -22,6 +23,7 @@ namespace Plan
     /// </summary>
     sealed partial class App : Application
     {
+        Frame rootFrame;
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -31,6 +33,7 @@ namespace Plan
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
+
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -46,13 +49,12 @@ namespace Plan
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-        var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(
-        new Uri("ms-appx://VoiceCommandDefinition.xml"));
-        await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.
-        InstallCommandDefinitionsFromStorageFileAsync(storageFile);
+        //var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(
+        //new Uri("ms-appx://VoiceCommandDefinition.xml"));
+        //await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.
+        //InstallCommandDefinitionsFromStorageFileAsync(storageFile);
 
             Frame rootFrame = Window.Current.Content as Frame;
-
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
             if (rootFrame == null)
@@ -105,6 +107,92 @@ namespace Plan
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+        protected override void OnActivated(IActivatedEventArgs e)
+        {
+            
+          // Was the app activated by a voice command?
+          if (e.Kind != Windows.ApplicationModel.Activation.ActivationKind.VoiceCommand)
+          {
+            return;
+          }
+
+          var commandArgs = e as Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs;
+
+          SpeechRecognitionResult speechRecognitionResult = 
+            commandArgs.Result;
+
+          // Get the name of the voice command and the text spoken
+          string voiceCommandName = speechRecognitionResult.RulePath[0];
+          string textSpoken = speechRecognitionResult.Text;
+          // The commandMode is either "voice" or "text", and it indicates how the voice command was entered by the user.
+          // Apps should respect "text" mode by providing feedback in a silent form.
+          string commandMode = this.SemanticInterpretation("commandMode", speechRecognitionResult);
+        
+          string topic = "";
+          string time = "";
+
+
+
+         switch (voiceCommandName)
+                {
+                    case "planner":
+                        // Access the value of the {destination} phrase in the voice command
+                        topic = speechRecognitionResult.SemanticInterpretation.Properties["topic"][0];
+                        time = speechRecognitionResult.SemanticInterpretation.Properties["time"][0];
+                        break;
+
+                    default:
+                        // There is no match for the voice command name. Navigate to MainPage
+                        break;
+                }
+
+                // Repeat the same basic initialization as OnLaunched() above, taking into account whether
+                // or not the app is already active.
+                rootFrame = Window.Current.Content as Frame;
+          if (this.rootFrame == null)
+          {
+            // App needs to create a new Frame, not shown
+          }
+
+          // Repeat the same basic initialization as OnLaunched() above, taking into account whether
+                // or not the app is already active.
+                rootFrame = Window.Current.Content as Frame;
+
+                // Do not repeat app initialization when the Window already has content,
+                // just ensure that the window is active
+                if (rootFrame == null)
+                {
+                    // Create a Frame to act as the navigation context and navigate to the first page
+                    rootFrame = new Frame();
+
+                    rootFrame.NavigationFailed += OnNavigationFailed;
+
+                    // Place the frame in the current Window
+                    Window.Current.Content = rootFrame;
+                }
+
+                if (!rootFrame.Navigate(typeof(MainPage), topic))
+                {
+                    throw new Exception("Failed to create voice command page");
+                }
+
+                // Ensure the current window is active
+                Window.Current.Activate();
+            }
+        /// <summary>
+        /// Returns the semantic interpretation of a speech result. Returns null if there is no interpretation for
+        /// that key.
+        /// </summary>
+        /// <param name="interpretationKey">The interpretation key.</param>
+        /// <param name="speechRecognitionResult">The result to get an interpretation from.</param>
+        /// <returns></returns>
+        private string SemanticInterpretation(string interpretationKey, SpeechRecognitionResult speechRecognitionResult)
+        {
+            return speechRecognitionResult.SemanticInterpretation.Properties[interpretationKey].FirstOrDefault();
+        }
+
+
 
     }
 }

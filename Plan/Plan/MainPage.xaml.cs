@@ -37,6 +37,9 @@ namespace Plan
         public static int SaveYear {get; set;}
         public static int SaveMonth {get; set;}
         public static int SaveDay {get; set;}
+        public static int OrigYear {get; set;}
+        public static int OrigMonth {get; set;}
+        public static int OrigDay {get; set;}
         public static bool StringInput {get; set;}
 
         public MainPage()
@@ -55,6 +58,11 @@ namespace Plan
             int year = CurrentTime.Year;
             int month = CurrentTime.Month;
             int day = CurrentTime.Day + Offset;
+
+        OrigYear = year;
+        OrigMonth = month;
+        OrigDay = 29; // demo purposes only
+
             int hour = CurrentTime.Hour;
             int min = CurrentTime.Minute;
             int sec = CurrentTime.Second;
@@ -1035,11 +1043,184 @@ namespace Plan
                 string eventName = e.EventName;
                 addTextbox(eventName, first);
                 addRectangles(first, last);
-                
             }
         }
 
-        private void addTextbox(string eventName, int first)
+   
+        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
+        {   
+            if (ProMode)
+            {
+                RecognizeCalendar();
+            }
+            else if (!SetTime) RecognizeCalendar();
+            else RegisterEvent();
+        }
+
+        private async void RecognizeCalendar()
+        {
+            var InkRecognizer = new InkRecognizerContainer();
+            if (InkRecognizer != null)
+            {
+                try
+                {
+
+                    var recognitionResults = await InkRecognizer.RecognizeAsync(this.CalendarInk.InkPresenter.StrokeContainer, InkRecognitionTarget.All);
+                    string recognizedText = string.Join(" ", recognitionResults.Select(i => i.GetTextCandidates()[0]));
+                    this.CalendarInk.InkPresenter.StrokeContainer.Clear();
+                    ResultText = recognizedText;
+                    if (!ProMode) EventText.Text = "Select time for: " + recognizedText;
+                    SetTime = true;
+                    if (ProMode)
+                    {
+                        RegisterEvent();
+                        Refresh();
+                    }
+                }
+                catch
+                {
+                    EventText.Text = "Please try again.";
+                }
+            }
+        }
+
+        private void RegisterEvent()
+        {
+            Rect strokes = CalendarInk.InkPresenter.StrokeContainer.BoundingRect;
+            int top = (int)strokes.Top;
+            int bottom = (int)strokes.Bottom;
+            int left = (int)strokes.Left;
+            int right = (int)strokes.Right;
+
+            int i;
+            bool startFound = false;
+            int startI = -1;
+            int endI = -1;
+            int startDay = -1;
+            Double startHourDiv2 = -1;
+            int endDay = -1;
+            Double endHourDiv2 = -1;
+            
+            for (i = 0; i < 336; i++)
+            { //20 is padding
+                if (left <= ((i/48)*150)+150+20 && ((i/48)*150)+20 <= right && top <= ((i%48)*38)+37+20  && ((i%48)*38)+20 <= bottom)
+                {    
+                    if (!startFound)
+                    {
+                        startI = i;
+                        startDay = i/48;
+                        startHourDiv2 = i%48;
+                        startFound = true;
+                    }
+                }
+                else
+                    if (startFound)
+                    {
+                        endI = (i-1);
+                        endDay = (i-1)/48;
+                        endHourDiv2 = (i-1)%48;
+                        break;
+                    }
+            }
+
+            if (startDay == -1)
+            {
+                EventText.Text = "Please select time again.";
+                this.CalendarInk.InkPresenter.StrokeContainer.Clear();
+                return;
+            }
+            DateTime eventTime = new DateTime(SaveYear, SaveMonth, SaveDay).AddDays(startDay).AddHours(startHourDiv2/2);
+            DateTime endTime = new DateTime(SaveYear, SaveMonth, SaveDay).AddDays(endDay).AddHours(endHourDiv2/2);
+            TimeSpan duration = endTime.Subtract(eventTime);
+            string eventName = ResultText;
+            CalEvent result = new CalEvent(eventName, eventTime, duration, startI, endI);
+            this.Events.Add(result);
+            EventText.Text = "Event registered: " + ResultText;
+            
+            Refresh();
+
+        }
+
+        private void DeleteEvent()
+        {
+            Rect strokes = CalendarInk.InkPresenter.StrokeContainer.BoundingRect;
+            int top = (int)strokes.Top;
+            int bottom = (int)strokes.Bottom;
+            int left = (int)strokes.Left;
+            int right = (int)strokes.Right;
+
+            int i;
+            bool startFound = false;
+            int startI = -1;
+            int endI = -1;
+            int startDay = -1;
+            Double startHourDiv2 = -1;
+            int endDay = -1;
+            Double endHourDiv2 = -1;
+            
+            for (i = 0; i < 336; i++)
+            { //20 is padding
+                if (left <= ((i/48)*150)+150+20 && ((i/48)*150)+20 <= right && top <= ((i%48)*38)+37+20  && ((i%48)*38)+20 <= bottom)
+                {    
+                    if (!startFound)
+                    {
+                        startI = i;
+                        startDay = i/48;
+                        startHourDiv2 = i%48;
+                        startFound = true;
+                    }
+                }
+                else
+                    if (startFound)
+                    {
+                        endI = i-1;
+                        endDay = i-1/48;
+                        endHourDiv2 = i-1%48;
+                        break;
+                    }
+            }
+
+            if (startDay == -1)
+            {
+                EventText.Text = "Please select time again.";
+                this.CalendarInk.InkPresenter.StrokeContainer.Clear();
+                return;
+            }
+
+            CalEvent toDelete = null;
+            
+            DateTime start = new DateTime(SaveYear, SaveMonth, SaveDay, 0, 0, 0);
+            DateTime end = new DateTime(SaveYear, SaveMonth, SaveDay, 23, 59, 59).AddDays(6);            int count = Events.Count;
+            for (i = 0; i < count; i++)
+            {
+                CalEvent e = Events[i];
+                int lowbound = start.CompareTo(e.EventTime.Add(e.Duration)); // start 7days < end time
+                int upbound = end.CompareTo(e.EventTime); // start time < end 7days
+                if (lowbound <= 0 && upbound >= 0)
+                {
+
+                    if (startI <= e.EndI ||  endI <= e.StartI)
+                    toDelete = e;
+                }
+            }
+            if (toDelete != null) Events.Remove(toDelete);
+            
+            Refresh();
+        }
+
+        private void EventText_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                var s = EventText.Text;
+                ResultText = s;
+                // figure out dependency property
+
+                EventText.Text = s;
+                SetTime = true;
+            }
+        }
+       private void addTextbox(string eventName, int first)
         {
             if(first == 0) t0.Text = eventName;
             else if(first == 1) t1.Text = eventName;
@@ -1720,181 +1901,6 @@ namespace Plan
             if(first <= 334 && 334 <= last) r334.Fill = col;
             if(first <= 335 && 335 <= last) r335.Fill = col;
         }
-        
-        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
-        {   
-            if (ProMode)
-            {
-                RecognizeCalendar();
-            }
-            else if (!SetTime) RecognizeCalendar();
-            else RegisterEvent();
-        }
-
-        private async void RecognizeCalendar()
-        {
-            var InkRecognizer = new InkRecognizerContainer();
-            if (InkRecognizer != null)
-            {
-                try
-                {
-
-                    var recognitionResults = await InkRecognizer.RecognizeAsync(this.CalendarInk.InkPresenter.StrokeContainer, InkRecognitionTarget.All);
-                    string recognizedText = string.Join(" ", recognitionResults.Select(i => i.GetTextCandidates()[0]));
-                    this.CalendarInk.InkPresenter.StrokeContainer.Clear();
-                    ResultText = recognizedText;
-                    if (!ProMode) EventText.Text = "Select time for: " + recognizedText;
-                    SetTime = true;
-                    if (ProMode)
-                    {
-                        RegisterEvent();
-                        Refresh();
-                    }
-                }
-                catch
-                {
-                    EventText.Text = "Please try again.";
-                }
-            }
-        }
-
-        private void RegisterEvent()
-        {
-            Rect strokes = CalendarInk.InkPresenter.StrokeContainer.BoundingRect;
-            int top = (int)strokes.Top;
-            int bottom = (int)strokes.Bottom;
-            int left = (int)strokes.Left;
-            int right = (int)strokes.Right;
-
-            int i;
-            bool startFound = false;
-            int startI = -1;
-            int endI = -1;
-            int startDay = -1;
-            Double startHourDiv2 = -1;
-            int endDay = -1;
-            Double endHourDiv2 = -1;
-            
-            for (i = 0; i < 336; i++)
-            { //20 is padding
-                if (left <= ((i/48)*150)+150+20 && ((i/48)*150)+20 <= right && top <= ((i%48)*38)+37+20  && ((i%48)*38)+20 <= bottom)
-                {    
-                    if (!startFound)
-                    {
-                        startI = i;
-                        startDay = i/48;
-                        startHourDiv2 = i%48;
-                        startFound = true;
-                    }
-                }
-                else
-                    if (startFound)
-                    {
-                        endI = i-1;
-                        endDay = i-1/48;
-                        endHourDiv2 = i-1%48;
-                        break;
-                    }
-            }
-
-            if (startDay == -1)
-            {
-                EventText.Text = "Please select time again.";
-                this.CalendarInk.InkPresenter.StrokeContainer.Clear();
-                return;
-            }
-            DateTime eventTime = new DateTime(SaveYear, SaveMonth, SaveDay).AddDays(startDay).AddHours(startHourDiv2/2);
-            DateTime endTime = new DateTime(SaveYear, SaveMonth, SaveDay).AddDays(endDay).AddHours(endHourDiv2/2);
-            TimeSpan duration = endTime.Subtract(eventTime);
-            string eventName = ResultText;
-            CalEvent result = new CalEvent(eventName, eventTime, duration, startI, endI);
-            this.Events.Add(result);
-            EventText.Text = "Event registered: " + ResultText;
-            
-            Refresh();
-
-        }
-
-        private void DeleteEvent()
-        {
-            Rect strokes = CalendarInk.InkPresenter.StrokeContainer.BoundingRect;
-            int top = (int)strokes.Top;
-            int bottom = (int)strokes.Bottom;
-            int left = (int)strokes.Left;
-            int right = (int)strokes.Right;
-
-            int i;
-            bool startFound = false;
-            int startI = -1;
-            int endI = -1;
-            int startDay = -1;
-            Double startHourDiv2 = -1;
-            int endDay = -1;
-            Double endHourDiv2 = -1;
-            
-            for (i = 0; i < 336; i++)
-            { //20 is padding
-                if (left <= ((i/48)*150)+150+20 && ((i/48)*150)+20 <= right && top <= ((i%48)*38)+37+20  && ((i%48)*38)+20 <= bottom)
-                {    
-                    if (!startFound)
-                    {
-                        startI = i;
-                        startDay = i/48;
-                        startHourDiv2 = i%48;
-                        startFound = true;
-                    }
-                }
-                else
-                    if (startFound)
-                    {
-                        endI = i-1;
-                        endDay = i-1/48;
-                        endHourDiv2 = i-1%48;
-                        break;
-                    }
-            }
-
-            if (startDay == -1)
-            {
-                EventText.Text = "Please select time again.";
-                this.CalendarInk.InkPresenter.StrokeContainer.Clear();
-                return;
-            }
-
-            CalEvent toDelete = null;
-            
-            DateTime start = new DateTime(SaveYear, SaveMonth, SaveDay, 0, 0, 0);
-            DateTime end = new DateTime(SaveYear, SaveMonth, SaveDay, 23, 59, 59).AddDays(6);            int count = Events.Count;
-            for (i = 0; i < count; i++)
-            {
-                CalEvent e = Events[i];
-                int lowbound = start.CompareTo(e.EventTime.Add(e.Duration)); // start 7days < end time
-                int upbound = end.CompareTo(e.EventTime); // start time < end 7days
-                if (lowbound <= 0 && upbound >= 0)
-                {
-
-                    if (startI <= e.EndI ||  endI <= e.StartI)
-                    toDelete = e;
-                }
-            }
-            if (toDelete != null) Events.Remove(toDelete);
-            
-            Refresh();
-        }
-
-        private void EventText_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == Windows.System.VirtualKey.Enter)
-            {
-                var s = EventText.Text;
-                ResultText = s;
-                // figure out dependency property
-
-                
-
-                EventText.Text = s;
-                SetTime = true;
-            }
-        }
+      
     }
 }

@@ -14,17 +14,25 @@
             <RowDefinition Height ="100"></RowDefinition>
             <RowDefinition Height ="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid x:Name="TextEntry">
-            <Grid>
+
+        <Grid x:Name="TopBar">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="500" MinWidth="400"/>
+                <ColumnDefinition Width ="1"/>
+                <ColumnDefinition Width ="2*"/>
+            </Grid.ColumnDefinitions>
+            <Path Grid.Column="1" Data="M865,10 L865,60" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="0,0,0,0" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition" Height="50"/>
+            <TextBox Grid.Column="2" x:Name="EventText" Height="70" BorderThickness="0" Padding="20,10,0,0" TextWrapping="Wrap" Text="" PlaceholderText="Write or Enter Event"
+        		d:LayoutOverrides="LeftPosition, RightPosition" Background="#FFF2F2F2" FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited"/>
+            <InkCanvas x:Name="EventCanvas" Grid.Column="2" Margin="0" d:LayoutOverrides="LeftPosition, RightPosition" Tapped="EventCanvas_Tapped"/>
+            <Grid x:Name="NavGrid" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width ="2*"/>
-                    <ColumnDefinition Width ="1"/>
-                    <ColumnDefinition Width ="3*"/>
+                    <ColumnDefinition Width ="70"/>
+                    <ColumnDefinition Width ="70"/>
+                    <ColumnDefinition Width ="360"/>
                 </Grid.ColumnDefinitions>
-                <Path Grid.Column="1" Data="M865,10 L865,60" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="0,0,0,0" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition" Height="50"/>
-                <TextBox Grid.Column="2" x:Name="EventText" Height="70" BorderThickness="0" Padding="20,10,0,0" TextWrapping="Wrap" Text="" PlaceholderText="Write or Enter Event"
-            		d:LayoutOverrides="LeftPosition, RightPosition" Background="#FFF2F2F2" FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited"/>
-                <InkCanvas x:Name="EventCanvas" Grid.Column="2" Margin="0" d:LayoutOverrides="LeftPosition, RightPosition" Tapped="EventCanvas_Tapped"/>
+                <TextBlock x:Name="MonthText" Height="70" Padding="20,10,0,0" TextWrapping="Wrap" Text="Hello"
+        			FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" d:LayoutOverrides="LeftPosition, RightPosition" Grid.Column="2"/>
             </Grid>
         </Grid>
 
@@ -86,11 +94,7 @@
                     <RowDefinition Height ="50"/>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Column="2" Fill="Green" Margin="0" Grid.Row="24" Stroke="Black"/>
-                <InkCanvas x:Name="CalendarInk" Grid.ColumnSpan="8" Grid.Column="1" Margin="-30,-37,29,0" Grid.RowSpan="25" d:LayoutOverrides="LeftPosition, RightPosition">
-                    <InkCanvas.Resources>
-
-                    </InkCanvas.Resources>
-                </InkCanvas>
+                <InkCanvas x:Name="CalendarInk" Grid.ColumnSpan="8" Grid.Column="1" Margin="-30,-37,29,0" Grid.RowSpan="25" d:LayoutOverrides="LeftPosition, RightPosition"/>
 
             </Grid>
         </ScrollViewer>

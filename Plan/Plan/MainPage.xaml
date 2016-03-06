@@ -7,51 +7,76 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="Main" Background="#FFF2F2F2" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+    <Grid x:Name="Main" Background="#FFFAFAFA" ScrollViewer.HorizontalScrollBarVisibility="Visible">
         <Grid.RowDefinitions>
             <RowDefinition Height ="70"></RowDefinition>
             <RowDefinition Height ="1"></RowDefinition>
-            <RowDefinition Height ="100"></RowDefinition>
-            <RowDefinition Height ="*"></RowDefinition>
+            <RowDefinition Height ="70"></RowDefinition>
+            <RowDefinition Height ="199*"></RowDefinition>
+            <RowDefinition Height="620*"/>
         </Grid.RowDefinitions>
 
-        <Grid x:Name="TopBar">
+        <Grid x:Name="TopBar" Background="#FFFAFAFA">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width ="500" MinWidth="400"/>
                 <ColumnDefinition Width ="1"/>
                 <ColumnDefinition Width ="2*"/>
             </Grid.ColumnDefinitions>
-            <Path Grid.Column="1" Data="M865,10 L865,60" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="0,0,0,0" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition" Height="50"/>
+            <Path Grid.Column="1" Data="M865,10 L865,60" Fill="#FFDDDDDD" HorizontalAlignment="Left" Margin="0,0,0,0" Stretch="Fill" Stroke="Gray" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition" Height="50"/>
             <TextBox Grid.Column="2" x:Name="EventText" Height="70" BorderThickness="0" Padding="20,10,0,0" TextWrapping="Wrap" Text="" PlaceholderText="Write or Enter Event"
-        		d:LayoutOverrides="LeftPosition, RightPosition" Background="#FFF2F2F2" FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited"/>
+        		d:LayoutOverrides="LeftPosition, RightPosition" Background="#FFF2F2F2" FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" FontWeight="SemiLight"/>
             <InkCanvas x:Name="EventCanvas" Grid.Column="2" Margin="0" d:LayoutOverrides="LeftPosition, RightPosition" Tapped="EventCanvas_Tapped"/>
-            <Grid x:Name="NavGrid" Grid.ColumnSpan="2">
+            <Grid x:Name="NavGrid" Grid.ColumnSpan="2" Background="#FFFAFAFA">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width ="70"/>
                     <ColumnDefinition Width ="70"/>
                     <ColumnDefinition Width ="360"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock x:Name="MonthText" Height="70" Padding="20,10,0,0" TextWrapping="Wrap" Text="Hello"
-        			FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" d:LayoutOverrides="LeftPosition, RightPosition" Grid.Column="2"/>
+        			FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" d:LayoutOverrides="LeftPosition, RightPosition" Grid.Column="2" FontWeight="Light"/>
+                <Button x:Name="PreviousWeek" Content="&lt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,10" Background="#00000000" FontSize="40" FontWeight="Light" Click="PreviousWeek_Click"/>
+                <Button x:Name="NextWeek" Content="&gt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,10" Background="#00000000" FontSize="40" FontWeight="Light" Grid.Column="1" Click="NextWeek_Click"/>
             </Grid>
         </Grid>
 
-        <Grid x:Name="Date" Grid.Row="2">
+        <Grid x:Name="Date" Grid.Row="2" Background="#FFFAFAFA" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width ="150"/>
+                <ColumnDefinition Width ="37"/>
+                <ColumnDefinition Width="113"/>
                 <ColumnDefinition Width ="3*" MinWidth="100" />
-                <ColumnDefinition Width ="3*" MinWidth="100"/>
+                <ColumnDefinition Width ="1" />
                 <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="1" />
                 <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="1" />
                 <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="1" />
                 <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="1" />
                 <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="1" />
+                <ColumnDefinition Width ="3*" MinWidth="100" />
+                <ColumnDefinition Width ="1" />
                 <ColumnDefinition Width ="1*" MinWidth="30"/>
             </Grid.ColumnDefinitions>
+            <TextBlock x:Name="MondayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Mon"
+        		FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="2" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Margin="0,0,-0.333,0"/>
+            <TextBlock x:Name="TuesdayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Tue"
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="4" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Grid.ColumnSpan="2" Margin="0.333,0,0,0"/>
+            <TextBlock x:Name="WednesdayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Wed"
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="6" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Margin="0,0,-0.333,0"/>
+            <TextBlock x:Name="ThursdayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Thu"
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="8" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Grid.ColumnSpan="2" Margin="0.333,0,0,0"/>
+            <TextBlock x:Name="FridayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Fri"
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="10" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" FontWeight="Light" Margin="0,0,-0.333,0"/>
+            <TextBlock x:Name="SaturdayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Sat"
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="12" FontWeight="Light" Grid.ColumnSpan="2" Margin="0.333,0"/>
+            <TextBlock x:Name="SundayText" Padding="20,30,0,0" TextWrapping="Wrap" Text="Sun"
+            	FontSize="21.333" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" Grid.Column="14" FontWeight="Light" Margin="-0.333,0"/>
         </Grid>
         <ScrollViewer 
         HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.516,5.295" Grid.Row="3">
+        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.516,5.295" Grid.Row="3" Grid.RowSpan="2" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
 
             <Grid x:Name="Calendar" Background ="Transparent">
                 <Grid.ColumnDefinitions>

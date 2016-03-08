@@ -30,7 +30,7 @@
             <Button x:Name="ConfirmButton" Grid.Column="4" Content="✓" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00AAAAAA" FontSize="40" FontWeight="Thin" Click="ConfirmButton_Click"/>
             <Button x:Name="CancelButton" Grid.Column="5" Content="☓" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00AAAAAA" FontSize="40" FontWeight="Thin" Click="CancelButton_Click"/>
             <Button x:Name="ProModeButton" Grid.Column="6" Content="Off" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00000000" FontSize="30" FontWeight="Light" Click="ProModeButton_Click"/>
-            <TextBox Grid.Column="2" x:Name="EventText" Height="70" BorderThickness="0" Padding="20,10,0,0" TextWrapping="Wrap" Text="" PlaceholderText="Write or Enter Event"
+            <TextBox Grid.Column="2" x:Name="EventText" Height="70" BorderThickness="0" Padding="20,10,0,0" TextWrapping="Wrap" Text="" PlaceholderText="Type Event Here or Write Below"
         		d:LayoutOverrides="LeftPosition, RightPosition" Background="#FFF2F2F2" FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" FontWeight="SemiLight" SelectionHighlightColor="Black" KeyDown="EventText_KeyDown"/>
             <InkCanvas x:Name="EventCanvas" Grid.Column="2" Margin="0" d:LayoutOverrides="LeftPosition, RightPosition" Tapped="EventCanvas_Tapped"/>
             <Grid x:Name="NavGrid" Grid.ColumnSpan="2" Background="#FFFAFAFA">
@@ -41,8 +41,8 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock x:Name="MonthText" Height="70" Padding="20,10,0,0" TextWrapping="Wrap" Text="February 2016"
         			FontSize="32" PointerEntered="EventText_PointerEntered" PointerExited="EventText_PointerExited" d:LayoutOverrides="LeftPosition, RightPosition" Grid.Column="2" FontWeight="Light" SelectionHighlightColor="Black"/>
-                <Button x:Name="PreviousWeek" Content="&lt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00000000" FontSize="40" FontWeight="Light" Click="PreviousWeek_Click"/>
-                <Button x:Name="NextWeek" Content="&gt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00000000" FontSize="40" FontWeight="Light" Grid.Column="1" Click="NextWeek_Click"/>
+                <Button x:Name="PreviousWeek" Content="&lt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00000000" FontSize="40" FontWeight="Light" Click="PreviousWeek_Click" Padding="8,4,8,20"/>
+                <Button x:Name="NextWeek" Content="&gt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0,0,0,0" Background="#00000000" FontSize="40" FontWeight="Light" Grid.Column="1" Click="NextWeek_Click" Padding="8,4,8,20"/>
             </Grid>
             <Path Grid.Column="1" Data="M1288.67,0 L1288.67,68.4167" Fill="#FFDDDDDD" HorizontalAlignment="Left" Margin="0,10" Stretch="Fill" Stroke="#FFBBBBBB" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition"/>
             <Path Grid.Column="3" Data="M1288.67,0 L1288.67,68.4167" Fill="#FFDDDDDD" HorizontalAlignment="Left" Margin="0,10" Stretch="Fill" Stroke="#FFBBBBBB" UseLayoutRounding="False" Width="1" d:LayoutOverrides="TopPosition, BottomPosition"/>
@@ -964,7 +964,7 @@
                 <TextBlock x:Name="t334" Grid.Row="92" Grid.Column="14" TextWrapping="Wrap" Text="" Grid.RowSpan="10" Padding="10,0,10,0"/>
                 <TextBlock x:Name="t335" Grid.Row="94" Grid.Column="14" TextWrapping="Wrap" Text="" Grid.RowSpan="10" Padding="10,0,10,0"/>
                 
-                <TextBlock x:Name="textBlock" Margin="10,0" Grid.Row="96" TextWrapping="Wrap" Text="Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem  ·  Carpe Diem" Grid.ColumnSpan="15" d:LayoutOverrides="LeftMargin, RightMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" SelectionHighlightColor="#FF9A9A9A" FontSize="24" HorizontalAlignment="Center" Foreground="#FF959595"/>
+                <TextBlock x:Name="textBlock" Margin="10,0" Grid.Row="96" TextWrapping="Wrap" Text="There is no greater threat to the critics and cynics than those of us who are willing to fall because we have learned how to rise. -Brene Brown" Grid.ColumnSpan="15" d:LayoutOverrides="LeftMargin, RightMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" SelectionHighlightColor="#FF9A9A9A" FontSize="18" HorizontalAlignment="Center" Foreground="#FF959595"/>
                 <InkCanvas x:Name="CalendarInk" Grid.ColumnSpan="16" Grid.Column="1" Margin="-20,-20,20,10" Grid.RowSpan="97" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" IsHitTestVisible="False"/>
 
             </Grid>

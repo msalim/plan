@@ -408,6 +408,7 @@ namespace Plan
                         startDay = i/48;
                         startHourDiv2 = i%48;
                         startFound = true;
+                        break;
                     }
                 }
                 else
@@ -430,7 +431,8 @@ namespace Plan
             CalEvent toDelete = null;
             
             DateTime start = new DateTime(SaveYear, SaveMonth, SaveDay, 0, 0, 0);
-            DateTime end = new DateTime(SaveYear, SaveMonth, SaveDay, 23, 59, 59).AddDays(6);            int count = Events.Count;
+            DateTime end = new DateTime(SaveYear, SaveMonth, SaveDay, 23, 59, 59).AddDays(6);
+            int count = Events.Count;
             for (i = 0; i < count; i++)
             {
                 CalEvent e = Events[i];
@@ -439,8 +441,14 @@ namespace Plan
                 if (lowbound <= 0 && upbound >= 0)
                 {
 
-                    if (startI <= e.EndI ||  endI <= e.StartI)
+                    if (startI <= e.EndI && endI <= e.StartI)
                     toDelete = e;
+                    if (toDelete != null)
+                    {
+                        Events.Remove(toDelete);
+                        toDelete = null;
+                        break;
+                    }
                 }
             }
             if (toDelete != null) Events.Remove(toDelete);

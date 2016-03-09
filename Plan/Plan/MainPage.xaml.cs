@@ -58,9 +58,9 @@ namespace Plan
             int month = CurrentTime.Month;
             int day = CurrentTime.Day + Offset;
 
-        OrigYear = year;
-        OrigMonth = month;
-        OrigDay = 29; // demo purposes only
+            OrigYear = year;
+            OrigMonth = month;
+            OrigDay = day; // shouldn't be a problem?
 
             int hour = CurrentTime.Hour;
             int min = CurrentTime.Minute;

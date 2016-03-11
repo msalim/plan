@@ -1,4 +1,29 @@
-﻿using System;
+﻿//////////////////////////////////////////////////////////////////////////////
+//                                  Plan                                    //
+//        Bringing the pen you know and love into digital calendars.        //
+//                                                                          //
+// Plan uses a custom-tailored UI and innovative use of the Surface Pen API //
+// to enable adding events via inking.                                      //
+// Upcoming: Code documentation and refactoring                             //
+//           Cortana integration                                            //
+//           Offline file saving (SQL)                                      //
+//           3rd party calendar integration                                 //
+//           Better backend calendar handling                               //
+//                                                                          //
+// DEPENDENCIES: UWP Tools, 1.2                                             //
+//                                                                          //
+// Initial version Made with love by Matthew Salim at BrickHack 2.          //
+// Huge thanks to:                                                          //
+//   Gavin Bauman (@gavination2), for the extensive help                    //
+//   Stacey Mulcahy (@bitchwhocodes), for the inspiration and encouragement //
+//   Nick Landry (@ActiveNick), for teaching about Cortana                  //
+//   Mary Baker (@marybees), for the huge excited spirit                    //
+//                                                                          //
+//   Joungho Seo (@SJouh), awesome friend                                   //
+//                                                                          //
+//////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 using System.IO;
@@ -100,7 +125,7 @@ namespace Plan
             else if (month == 9) monthStr = "September";
             else if (month == 10) monthStr = "October";
             else if (month == 11) monthStr = "November";
-            else if (month == 12) monthStr = "December";
+            else if (month == 12) monthStr = "December";}
 
 
             string yearStr = year.ToString();
